@@ -1,0 +1,49 @@
+#CrearOrden {
+   box-shadow: 1px 1px 1px 2px black;
+    border-radius: 15px;
+    width: min(20em, 100%);
+    height: min(100%, 15em);
+    display: grid;
+    justify-content: baseline;
+    align-items: center;
+    padding: 2em;
+    overflow: scroll;
+    transition: background-color 0.3s transform 0.2s;
+    position: relative;
+
+    textarea {
+        max-width:  100%;
+        max-height: fit-content;
+       text-align: center;
+       opacity: 50%;
+       margin-bottom: 1em;
+       border-radius: 15px;
+       box-shadow: 1px 1px 1px 1px black;
+       border: none;
+    }
+
+    button{
+        color: aliceblue;
+        background-color: inherit;
+        border-radius: 15px;
+        max-width: 100%;
+        max-height: fit-content;
+        box-shadow: 0px 1px 1px 1px black;
+        border: none;
+
+        &:hover{
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+        &:active {
+            transform: scale(0.95);
+          }
+
+          &:first-child{
+            width: 3em;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: .5em;
+          }
+    }
+}

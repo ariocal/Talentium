@@ -1,0 +1,47 @@
+#front {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  background: inherit;
+  backdrop-filter: blur(10px);
+  width: min(100%,50em);
+  border: 1px dotted gainsboro;
+  margin: 1em;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  .CrearOrden {
+    box-shadow: 1px 1px 1px 2px black;
+    border-radius: 15px;
+    width: min(20em, 100%);
+    height: fit-content;
+    display: grid;
+    justify-content: baseline;
+    align-items: center;
+    transition: background-color 0.3s transform 0.2s;
+    position: relative;
+
+    text-align: center;
+
+    textarea, input, button {
+     display: none;
+    }
+
+    div{
+      display: block;
+      width: inherit;
+      &:hover {
+        background-color: rgba(0, 0, 255, 0.5);
+        border-radius: inherit;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  } 
+  
+}
