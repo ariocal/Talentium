@@ -13,60 +13,54 @@
         <div class="logo"><img src="img/Logo2.png" alt="Logo"></div>
         <div class="menu">
             <p class="nav-toggle" id="clienteToggle">
-                        Cliente 
+                Cliente
             </p>
-            
-            <p class="nav-toggle">
-                Profesional 
+
+            <p class="nav-toggle" id="profesionalToggle">
+                Profesional
             </p>
-        
-            
+
+
         </div>
         <div class="menu">
             <p class="nav-toggle">
-                Ingresar 
-    </p>
-    
-    <p class="nav-toggle">
-        Registrate 
-    </p>
+                Ingresar
+            </p>
+
+            <p class="nav-toggle">
+                Registrate
+            </p>
         </div>
 
         <!-- MODAL CLIENTE -->
-            <div class="modal_cliente">
-
-                <div class="modal_content">
-                    <span class="close">x</span>
-
+        <div class="modal_cliente">
+            <div class="modal_content">
+                <span class="close">x</span>
                 <h2>Como Cliente puedes...</h2>
                 <p>Contratar los servicios del profesional que necesites, tan fácil como:</p>
-                <ul>
-                    <li>Hacer la oferta de trabajo.</li>
-                    <li>El profesional acepta la propuesta.</li>
-                    <li>Coordinan la reunión.</li>
-                    <li>Se realiza el trabajo.</li>
-                    <li>Y listo...</li>
-                </ul>
+                <p>1. Hacer la oferta de
+                trabajo.</p>
+                <p>2. El profesional acepta la propuesta.</p>
+                <p>3. Coordinan la reunión.</p>
+                <p>4. Se realiza el trabajo.</p>
+                <p>5. Y listo...</p>
             </div>
-            
-            </div>
+        </div>
 
-        <!-- MODAL Profesional
-        <div id="modal_profesional" class="modal">
-            <div class="modal-content">
-                <label for="modalToggle" class="close">&times;</label>
+        <!-- MODAL Profesional -->
+        <div class="modal_profesional">
+            <div class="modal_content">
+                <span class="close">x</span>
                 <h2>Como Profesional puedes...</h2>
                 <p>Además de contratar los servicios de un profesional que necesites, también puedes ofrece los
                     servicios en los que te especializas tan fácil como:</p>
-                <ul>
-                    <li>Actualizar tu perfil como Profesional.</li>
-                    <li>Ver órdenes de trabajo, aceptarlas y ofrecer tus servicios.</li>
-                    <li>Coordinan la reunión.</li>
-                    <li>Realizar el trabajo en el tiempo acordado.</li>
-                    <li>Y listo...</li>
-                </ul>
+                <p>1. Actualizar tu perfil como Profesional.</p>
+                <p>2. Ver órdenes de trabajo, aceptarlas y ofrecer tus servicios.</p>
+                <p>3. Coordinan la reunión.</p>
+                <p>4. Realizar el trabajo en el tiempo acordado.</p>
+                <p>5. Y listo...</p>
             </div>
-        </div> -->
+        </div>
     </header>
     <main>
         <section class="inicio">
@@ -150,18 +144,32 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const clienteToggle = document.getElementById("clienteToggle");
-    const modalCliente = document.querySelector(".modal_cliente");
-    const closeModalButton = modalCliente.querySelector(".close");
+            const clienteToggle = document.getElementById("clienteToggle");
+            const modalCliente = document.querySelector(".modal_cliente");
+            const closeModalButton = modalCliente.querySelector(".close");
 
-    clienteToggle.addEventListener("click", function () {
-        modalCliente.classList.toggle("modal_cliente_visible");
-    });
+            clienteToggle.addEventListener("click", function () {
+                modalCliente.classList.toggle("modal_cliente_visible");
+            });
 
-    closeModalButton.addEventListener("click", function () {
-        modalCliente.classList.remove("modal_cliente_visible");
-    });
-});
+            closeModalButton.addEventListener("click", function () {
+                modalCliente.classList.remove("modal_cliente_visible");
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const profesionalToggle = document.getElementById("profesionalToggle");
+            const modalProfesional = document.querySelector(".modal_profesional");
+            const closeModalButton = modalProfesional.querySelector(".close");
+
+            profesionalToggle.addEventListener("click", function () {
+                modalProfesional.classList.toggle("modal_profesional_visible");
+            });
+
+            closeModalButton.addEventListener("click", function () {
+                modalProfesional.classList.remove("modal_profesional_visible");
+            });
+        });
     </script>
 </body>
 

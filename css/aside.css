@@ -1,0 +1,101 @@
+@import url("style.css");
+
+aside {
+    width: 18%;
+    height: 100%;
+    background-color: var(--azul_principal);
+
+    img.logo {
+        width: 90%;
+        padding: 12px;
+        padding-bottom: 0;
+    }
+
+    div.avatarCliente {
+        display: grid;
+        margin: auto;
+
+        img.img_Cliente {
+            width: 70px;
+            height: 70px;
+            border: 5px double var(--azul_principal);
+            border-radius: 50%;
+            background-color: rgb(221, 218, 218);
+            margin: 2px auto 5px;
+        }
+
+        h4 {
+            width:  auto;
+            max-width: 100%;
+            text-align: center;
+            margin: auto;
+            padding: 7px 15px;
+            background-color: #0e36ad;
+            border-radius: 20px;
+            font-size: .85em;
+            font-weight: 200;
+            overflow: hidden;
+        }
+    }
+
+    nav {
+        background-color: var(--azul_oscuro);
+        padding: 20px;
+        font-size: 1.1em;
+        margin-top: 20px;
+        height: 58%;
+        border-top-right-radius: 60px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: left;
+            padding-top: 5px;
+
+            li {
+                margin-bottom: 1em;
+                letter-spacing: 0.2px;
+                margin-left: 15px;
+
+                &:hover {
+                    padding: 5px;
+                    padding-left: 5px;
+                    box-shadow: -4px 4px 8px rgba(252, 251, 251, 0.251);
+                }
+
+                &:active {
+                    padding: 5px;
+                    padding-left: 5px;
+                    box-shadow: -4px 4px 8px rgba(252, 251, 251, 0.251);
+                    background-color: rgba(250, 249, 247, 0.2);
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                    vertical-align: middle;
+                    margin-right: 20px;
+                    filter: invert(100%);
+                }
+
+                &.cerrar {
+                    display: flex;
+                    margin: 50px auto auto 5px;
+                    align-items: center;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+                    font-size: .9em;
+                    background-color: var(--azul_marino);
+
+                    img {
+                        width: 18px;
+                        height: 18px;
+                        filter: invert(100%);
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

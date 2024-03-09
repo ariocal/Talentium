@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/comp_perfil_prof.css">
+    <title>Talentium-Perfil-Profesional</title>
+</head>
+
+<body>
+    <aside>
+        <img class="logo" src="img/Logo1.png" alt="logo">
+        <div class="avatarCliente">
+            <img class="img_Cliente" src="img/NoAvatar.png" alt="avatar">
+            <h4>Cliente</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><img src="img/home.png" alt="home">Inicio</li>
+                <li><img src="img/datos.png" alt="datos">Datos</li>
+                <li><img src="img/ordenes.png" alt="órdenes">Ordenes</li>
+                <li><img src="img/agenda.png" alt="agenda">Agenda</li>
+                <li><img src="img/soporte.png" alt="soporte">Soporte</li>
+
+                <li class="cerrar"><img src="img/cerrar.png" alt="">
+                    <p>Cerrar sesión
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="cliente_header">
+        <div class="hola_buscador">
+            <h4>Hola, <span>Usuario</span></h4>
+            <form action="/tu-pagina-de-busqueda" method="get">
+                <label for="search"><img src="img/lupa.png" alt="lupa"></label>
+                <input class="buscador" type="text" id="search" name="q" placeholder="Escribe tu búsqueda">
+                <!-- <input type="submit" value="Buscar"> -->
+            </form>
+        </div>
+        <div class="recuadro">
+            <div class="volver">
+                <img src="img/flecha_izq.png" alt="">
+                <p>Volver</p>
+            </div>
+            <div class="contenidoRecuadro">
+                <h2>Completa tu perfil</h2>
+                <form class="perfil_form">
+                    <div class="perfil_columna_izq">
+                        <div class="form-item">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="form-item">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                        </div>
+                        <div class="form-item">
+                            <label for="dni">DNI</label>
+                            <input type="number" id="dni" placeholder="Ingrese su DNI">
+                        </div>
+                        <div class="form-item">
+                            <label for="celular">Celular</label>
+                            <input type="number" id="celular" placeholder="Ingrese su celular">
+                        </div>
+                    </div>
+
+                    <div class="perfil_columna_centro">
+                        <div class="form-item">
+                            <label for="calle">Calle</label>
+                            <input type="text" id="calle" placeholder="Ingrese la calle">
+                        </div>
+                        <div class="form-item">
+                            <label for="numero">Número</label>
+                            <input type="numero" id="numero" placeholder="Ingrese el número">
+                        </div>
+                        <div class="form-item">
+                            <label for="provincia">Provincia</label>
+                            <input type="text" id="provincia" placeholder="Ingrese la provincia">
+                        </div>
+                        <div class="form-item">
+                            <label for="localidad">Localidad</label>
+                            <input type="text" id="localidad" placeholder="Ingrese la localidad">
+                        </div>
+                    </div>
+
+                    <div class="perfil_columna_der">
+                        <div class="form-item">
+                            <label for="cbu">CBU</label>
+                            <input type="number" id="cbu" placeholder="Ingrese su CBU">
+                        </div>
+                        <div class="form-item">
+                            <label for="alias">Alias</label>
+                            <input type="text" id="alias" placeholder="Ingrese su Alias">
+                        </div>
+                        <div class="form-item">
+                            <label for="especialidad">Especialidad</label>
+                            <select id="especialidad" name="Ingrese su especialidad">
+                                <option value="" disabled selected>Selecciona una especialidad</option>
+                                <option value="albañil">Albañil</option>
+                                <option value="cuidador">cuidador</option>
+                                <option value="diseñador">Diseñador</option>
+                                <option value="electricista">Electricista</option>
+                                <option value="gasista">Gasista</option>
+                                <option value="jardinero">Jardinero</option>
+                                <option value="pintor">Pintor</option>
+                                <option value="plomero">Plomero</option>
+                                <option value="profesor">Profesor</option>
+                                <option value="programador">Programador</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <div class="boton_centrado">
+                        <button type="submit">Crear perfil</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
