@@ -12,13 +12,61 @@
     <header>
         <div class="logo"><img src="img/Logo2.png" alt="Logo"></div>
         <div class="menu">
-            <a href="#cliente">Cliente</a>
-            <a href="#profesional">Profesional</a>
+            <p class="nav-toggle" id="clienteToggle" aria-label="modal clientes">
+                        Cliente 
+            </p>
+            
+            <p class="nav-toggle" aria-label="modal clientes">
+                Profesional 
+            </p>
+        
+            
         </div>
         <div class="menu">
-            <a href="#ingresar">Ingresar</a>
-            <a href="#registrate">Registrate</a>
+            <p class="nav-toggle" aria-label="modal clientes">
+                Ingresar 
+    </p>
+    
+    <p class="nav-toggle" aria-label="modal clientes">
+        Registrate 
+    </p>
         </div>
+
+        <!-- MODAL CLIENTE -->
+            <div class="modal_cliente">
+
+                <div class="modal_content">
+                    <span class="close" aria-label="Cerrar modal">x</span>
+
+                <h2>Como Cliente puedes...</h2>
+                <p>Contratar los servicios del profesional que necesites, tan fácil como:</p>
+                <ul>
+                    <li>Hacer la oferta de trabajo.</li>
+                    <li>El profesional acepta la propuesta.</li>
+                    <li>Coordinan la reunión.</li>
+                    <li>Se realiza el trabajo.</li>
+                    <li>Y listo...</li>
+                </ul>
+            </div>
+            
+            </div>
+
+        <!-- MODAL Profesional
+        <div id="modal_profesional" class="modal">
+            <div class="modal-content">
+                <label for="modalToggle" class="close">&times;</label>
+                <h2>Como Profesional puedes...</h2>
+                <p>Además de contratar los servicios de un profesional que necesites, también puedes ofrece los
+                    servicios en los que te especializas tan fácil como:</p>
+                <ul>
+                    <li>Actualizar tu perfil como Profesional.</li>
+                    <li>Ver órdenes de trabajo, aceptarlas y ofrecer tus servicios.</li>
+                    <li>Coordinan la reunión.</li>
+                    <li>Realizar el trabajo en el tiempo acordado.</li>
+                    <li>Y listo...</li>
+                </ul>
+            </div>
+        </div> -->
     </header>
     <main>
         <section class="inicio">
@@ -93,12 +141,28 @@
                 Teléfono: 11-1111-1111<br>
                 Email: contacto@talentium
             </div>
-            
+
         </div>
         <div class="franja_NoCountry">
             <p>©2024-No Country - Team C16-84-FT-JAVA</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const clienteToggle = document.getElementById("clienteToggle");
+    const modalCliente = document.querySelector(".modal_cliente");
+    const closeModalButton = modalCliente.querySelector(".close");
+
+    clienteToggle.addEventListener("click", function () {
+        modalCliente.classList.toggle("modal_cliente_visible");
+    });
+
+    closeModalButton.addEventListener("click", function () {
+        modalCliente.classList.remove("modal_cliente_visible");
+    });
+});
+    </script>
 </body>
 
 </html>
