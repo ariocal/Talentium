@@ -88,7 +88,7 @@ section.cliente_header {
             padding: 20px 0 30px 0;
 
             h2{
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
             form.perfil_form{
                 position: relative;
@@ -121,7 +121,7 @@ section.cliente_header {
             .boton_centrado{
                 width: 63%;
                 position: absolute;
-                bottom: 5px;
+                bottom: 10px;
 
                 button{
                     background-color: var(--azul_principal);
@@ -129,7 +129,7 @@ section.cliente_header {
                     padding: 10px;
                     border: none;
                     border-radius: 10px;
-                    border: 1.5px ridge var(--azul_principal);
+                    border: 1.5px ridge var(--azul_claro);
                     cursor: pointer;
                     font-size: 1em;
                     font-weight: bolder;
