@@ -5,8 +5,13 @@
 }
 
 :root {
-    --blanco_tenue: rgb(238, 235, 235);
+    --blanco_tenue: #eeebeb;
     --azul_principal: #436ff3;
+    --azul_claro: #6387f1;
+    --azul_masClaro: #a6baf5;
+    --azul_clarisimo: #e7ecf8;
+    --azul_oscuro: #193b9f;
+    --azul_marino: #0e2877;
 }
 
 body {
@@ -47,63 +52,69 @@ header {
             }
         }
     }
-
 }
-/* #modal_cliente {
-    display: none;
-}
-
-#modal_cliente:checked+.modal {
-    display: block;
-}
-#modal_profesional {
-    display: none;
-}
-
-#modal_profesional:checked + .modal {
-    display: block;
-} */
+/* 
 .nav-toggle:focus(:focus-visible){
     outline: none;
-}
+} */
 .modal_cliente {
-    /* display: none; */
     position: fixed;
     top: 0;
     left: 100%;
     transition: left 0.3s;
     width: 100%;
     height: 100%;
-    background-color: rgba(30, 41, 38, 0.726);
+    background-color: rgba(30, 41, 38, 0.8);
     text-align: center;
-    li {
-        text-decoration: none;
-        list-style: none;
-    }
+    
     .modal_content { 
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ed8383;
+        background-color: var(--azul_principal);
         padding: 20px;
-        border: 1px solid #888;
+        border: 4px outset var(--azul_clarisimo);
+        border-radius: 10px;
         width: 80%;
         max-width: 400px;
         overflow: auto;
+        line-height: 1.75em;
 
+        h2 {
+            margin-bottom: .5em;
+        }
+        p {
+            text-align: left;
+            
+        }
+        ul {
+            margin-top: 10px;
+        }
+        ul li {
+            text-decoration: none;
+            list-style:decimal;
+            text-align: left;
+            margin-left: 25px;
+        }
         .close {
             color: white;
             font-size: 28px;
             cursor: pointer;
-
             position: absolute;
             top: -5px;
-            right: 8px;
+            right: 4px;
+            background-color: var(--azul_oscuro);
+            width: 30px;
+            height: 30px;;
 
             &:hover {
-                color: red;
+                color: var(--azul_claro);
             }
+            &:active {
+                color: rgba(255, 0, 0, 0.8);
+            }
+        
         }
     } 
 }
@@ -124,13 +135,9 @@ header {
             margin: 20px 0 30px;
             line-height: 1.1em;
         }
-
         p {
             line-height: 1.5em;
-
         }
-
-        ;
     }
 }
 
