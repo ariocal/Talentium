@@ -190,11 +190,18 @@ footer {
         a {
             color: var(--blue);
 
-            &:hover{
+            &:hover {
                 color: white;
             }
-            &:active{
+            &:active {
                 color: black;
+            }
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 3px;
+                margin-left: 0px;
+                filter: hue-rotate(240deg);
             }
         }
     }

@@ -1,0 +1,39 @@
+@import url("style.css");
+
+body {
+    height: 100vh;
+    position: relative;
+    
+    .volver {
+        position: absolute;
+        top: 2%;
+    }
+
+    .acerca_de {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 60%;
+        color: black;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        p {
+        height: auto;
+        min-height: 65vh;
+        background-color:  rgba(249, 246, 246, 0.7);
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+    
+        position: absolute;
+        width: 100%; 
+        }  
+    }
+}
+
+
+

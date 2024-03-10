@@ -17,6 +17,7 @@
     --azul_oscuro: #193b9f;
     --azul_marino: #0e2877;
     --blue: blue;
+    --blanco: #ffffff;
 }
 
 .volver{
@@ -31,7 +32,7 @@
         margin-right: 5px;
     }
     a {
-        color: white;
+        color: var(--blanco);
         font-weight: 800;
     }
 }
