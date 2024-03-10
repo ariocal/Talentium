@@ -66,22 +66,6 @@ section.cliente_header {
         border-radius: 5px;
         margin: 0 15px;
         
-        .volver{
-            display: flex;
-            justify-content: left;
-            padding: 20px 0 20px 40px;
-
-            img {
-                width: 20px;
-                height: 20px;
-                filter: invert(100%);
-                margin-right: 5px;
-            }
-            p {
-                color: white;
-                font-weight: 800;
-            }
-        }
         div.contenidoRecuadro{
             color: black;
             text-align: center;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro_card.css">
+    <title>Registro_Card</title>
+</head>
+
+<body>
+    <div class="volver">
+        <img src="img/flecha_izq.png" alt="">
+        <p>Volver</p>
+    </div>
+    <div class="registro_card">
+        <h4>Registro Talentium</h4>
+        <img src="img/NoAvatar.png" alt="avatar" class="avatar">
+        <input type="email" id="email" placeholder="Ingrese su e-mail (obligatorio)" required>
+        <input type="password" id="password" placeholder="Ingrese su contraseña (obligatorio)" required>
+        <div>
+            <h5>Avatar(opcional):</h5>
+
+            <div class="file-input-container">
+                <label for="file-input" class="file-input-label">Elegir Archivo</label>
+                <input type="file" id="file-input" onchange="updateFileName()">
+                <div id="file-name-container"></div>
+            </div>
+        </div>
+        <button class="login_button">Registrarse</button>
+    </div>
+
+    <script>
+        // Función para actualizar el nombre del archivo seleccionado
+        function updateFileName() {
+            const fileInput = document.getElementById('file-input');
+            const fileNameContainer = document.getElementById('file-name-container');
+
+            // Verificar si se seleccionó un archivo
+            if (fileInput.files.length > 0) {
+                // Mostrar el nombre del archivo seleccionado
+                fileNameContainer.textContent = `Archivo: ${fileInput.files[0].name}`;
+            } else {
+                // Limpiar el contenido si no se seleccionó ningún archivo
+                fileNameContainer.textContent = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

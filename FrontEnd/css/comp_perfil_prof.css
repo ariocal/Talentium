@@ -64,22 +64,7 @@ section.cliente_header {
         border-radius: 5px;
         margin: 0 15px;
         
-        .volver{
-            display: flex;
-            justify-content: left;
-            padding: 20px 0 20px 40px;
 
-            img {
-                width: 20px;
-                height: 20px;
-                filter: invert(100%);
-                margin-right: 5px;
-            }
-            p {
-                color: white;
-                font-weight: 800;
-            }
-        }
         div.contenidoRecuadro{
             color: black;
             text-align: center;
@@ -128,7 +113,7 @@ section.cliente_header {
                     color: var(--blanco_tenue);
                     padding: 10px;
                     border: none;
-                    border-radius: 10px;
+                    border-radius: 8px;
                     border: 1.5px ridge var(--azul_claro);
                     cursor: pointer;
                     font-size: 1em;
