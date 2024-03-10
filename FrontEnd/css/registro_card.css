@@ -8,7 +8,8 @@ body {
 
 .volver {
     position: absolute;
-    top: 2%;
+    top: 2%;    
+    font-weight: 800;
 }
 
 .registro_card {

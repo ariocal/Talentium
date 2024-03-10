@@ -16,12 +16,13 @@
     --azul_clarisimo: #e7ecf8;
     --azul_oscuro: #193b9f;
     --azul_marino: #0e2877;
+    --blue: blue;
 }
 
 .volver{
     display: flex;
     justify-content: left;
-    padding: 20px 0 20px 40px;
+    padding: 20px 0 20px 40px;    
 
     img {
         width: 20px;
@@ -29,7 +30,7 @@
         filter: invert(100%);
         margin-right: 5px;
     }
-    p {
+    a {
         color: white;
         font-weight: 800;
     }
