@@ -1,6 +1,7 @@
 @import url('/profesionalAceptarOrden.css');
 @import url('/profesionalListarOrden.css');
-@import url('/styleCartel.css');
+@import url('./styleCartel.css');
+@import url("../../css/style.css");/*importé mis estilos*/
 
 *{
 margin: 0;
@@ -9,7 +10,7 @@ box-sizing: border-box;
 }
 
 main{
-    background: linear-gradient(180deg, blue ,rgba(0, 0, 255, 0.735), white );
+    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
     width: 100vw;
     height: 100vh;
     display: grid;

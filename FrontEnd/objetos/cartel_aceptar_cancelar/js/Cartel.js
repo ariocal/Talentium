@@ -1,7 +1,7 @@
 export class Cartel {
 
     constructor(mensaje, divPadre) {
-        this.mensaje = mensaje ?? '¿estas seguro?';
+        this.mensaje = mensaje ?? '¿Estás seguro?';
         this.divPadre = divPadre ?? 'main';
         this.div;
     }
@@ -15,13 +15,13 @@ export class Cartel {
         vista.innerText = this.mensaje;
 
         const cancelar = document.createElement('button');
-        cancelar.innerText = 'cancelar';
+        cancelar.innerText = 'Cancelar';
         cancelar.addEventListener('click', ()=>{
             this.cerrar();
         });
 
         const aceptar = document.createElement('button');
-        aceptar.innerText = 'aceptar';
+        aceptar.innerText = 'Aceptar';
         aceptar.addEventListener('click', ()=>{
             alert('aca va la logica');
             this.cerrar();
