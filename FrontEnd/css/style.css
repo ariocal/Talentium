@@ -18,12 +18,15 @@
     --azul_marino: #0e2877;
     --blue: blue;
     --blanco: #ffffff;
+    --negro: #000;
 }
 
 .volver{
     display: flex;
     justify-content: left;
-    padding: 20px 0 20px 40px;    
+    padding: 20px 0 20px 40px; 
+    font-weight: 800;
+    color: var(--blanco);
 
     img {
         width: 20px;

@@ -3,7 +3,7 @@
 body {
     height: 100vh;
     position: relative;
-
+    
     .volver {
         position: absolute;
         top: 2%;
@@ -20,6 +20,7 @@ body {
             text-align: center;
             margin-bottom: 30px;
             text-shadow: -2px 2px 2px var(--negro);
+
         }
         p {
         height: auto;
@@ -33,7 +34,6 @@ body {
         position: absolute;
         width: 100%; 
         }  
-        
     }
 }
 

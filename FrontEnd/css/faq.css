@@ -15,11 +15,14 @@ body {
         translate: -50% -50%;
         width: 60%;
         color: black;
+        
 
         h2 {
             text-align: center;
             margin-bottom: 30px;
             color: var(--blanco_tenue);
+            text-shadow: -2px 2px 2px var(--negro);
+
         }
         div {
             position: absolute;

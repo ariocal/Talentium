@@ -1,0 +1,47 @@
+@import url("style.css");
+
+section.header_y_container {
+    grid-template-rows: 10% 90%;
+    width: 80%;
+
+    .hola_buscador {
+        flex: 1;
+        display: flex;
+        grid-template-rows: 10% 90%;
+        align-items: start;
+        justify-content: space-between;
+        padding: 15px 0;
+        width: 80vw;
+        color: white;
+
+        h4 {
+            margin-left: 15px;
+
+            span {
+                color: var(--azul_masClaro)
+            }
+        }
+
+        form {
+            background-color: var(--azul_clarisimo);
+            border-radius: 5px;
+            padding: 3px 8px 1px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+
+            label img {
+                width: 18px;
+                height: 18px;
+                filter: contrast(150%);
+                margin-right: 3px;
+            }
+
+            .buscador {
+                width: 190px;
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}

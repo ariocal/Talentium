@@ -94,6 +94,15 @@ aside {
                         filter: invert(100%);
                         margin-right: 10px;
                     }
+                    a {
+                        color: var(--blanco_tenue);
+                    }
+                    &:active{
+                        transform: scale(90%);
+                        background-color: var(--azul_principal);
+                        border: 2px solid var(--azul_marino);
+                        transition: all .5s ease;
+                    }
                 }
             }
         }

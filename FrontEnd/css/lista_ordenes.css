@@ -1,6 +1,6 @@
 @import url("style.css");
 @import url("aside.css");
-
+@import url("header_y_container.css");
 
 body {
     color: var(--blanco_tenue);
@@ -15,49 +15,7 @@ body {
     font-weight: 800;
     color: white;
 }
-section.cliente_header {
-    grid-template-rows: 10% 90%;
-    width: 80%;
-
-    .hola_buscador {
-        flex: 1;
-        display: flex;
-        grid-template-rows: 10% 90%;
-        align-items: start;
-        justify-content: space-between;
-        padding: 15px 0;
-        width: 80vw;
-        color: white;
-
-        h4 {
-            margin-left: 15px;
-            
-            span{
-                color: var(--azul_masClaro)
-            }
-        }
-        form {
-            background-color: var(--azul_clarisimo);
-            border-radius: 5px;
-            padding: 3px 8px 1px;
-            line-height: 20px;
-            display: flex;
-            align-items: center;
-
-            label img {
-                width: 18px;
-                height: 18px;
-                filter: contrast(150%);
-                margin-right: 3px;
-            }
-            .buscador{
-                width: 190px;
-                border: none;
-                background-color: transparent;
-            }
-        }
-    }
-
+section.header_y_container {
     .recuadro {
         display: grid;
         grid-template-rows: auto 1fr;
@@ -71,8 +29,6 @@ section.cliente_header {
         div.contenidoRecuadro{
             color: black;
             text-align: center;
-            display: grid;
-            justify-items: center;
             padding: 20px 0 30px 0;
             h2{
                 margin-bottom: 20px;
