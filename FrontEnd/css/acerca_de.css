@@ -1,20 +1,19 @@
 @import url("style.css");
 
 body {
-    height: 100vh;
-    position: relative;
-
-    .volver {
-        position: absolute;
-        top: 2%;
-    }
+    height: auto;
+    min-height: 100vh;
+}
 
     .acerca_de {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        translate: -50% -50%;
-        width: 60%;
+    width: 80%;
+    max-width: 800px;
+    margin: 0px auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    hyphens: auto;
 
         h2 {
             text-align: center;
@@ -22,16 +21,16 @@ body {
             text-shadow: -2px 2px 2px var(--negro);
         }
         p {
-        height: auto;
+        width: 100%; 
         min-height: 65vh;
         background-color:  rgba(249, 246, 246, 0.7);
         border-radius: 10px;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
         color: var(--negro);
+        margin-bottom: 30px;
 
-        position: absolute;
-        width: 100%; 
+        
         }  
         
     }

@@ -43,13 +43,8 @@ section.header_y_container {
                 gap: 20px;
 
                 div {
-                    width: 20vw;
-                    height: 30vh;
-                    display: grid;
-                    place-items: center;
                     background-color: var(--azul_oscuro);
                     border: 4px outset var(--azul_claro);
-
                     border-radius: 8px;
                     box-shadow: -4px 5px 5px rgba(0, 0, 0, 0.5);
                     color: var(--blanco);
@@ -62,9 +57,14 @@ section.header_y_container {
                         transform: scale(90%);
                     }
                     a {
+                        width: 20vw;
+                        height: 30vh;
+                        display: grid;
+                        place-items: center;
                         color: var(--blanco);
                     }
-                    &:nth-child(odd){
+
+                    &:nth-child(odd) {
                         background-color: var(--azul_marino);
                     }
                 }

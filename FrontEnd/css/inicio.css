@@ -1,7 +1,8 @@
+@import url("style.css");
+
 body {
+    height: auto;
     background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
-    color: var(--blanco_tenue);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {

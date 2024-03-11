@@ -1,5 +1,11 @@
-@import url("inicio.css");
 
+body {
+    min-height: 100hv;
+    height: auto;
+    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
+    color: var(--blanco_tenue);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +13,6 @@
     text-decoration: none;
     list-style: none;
 }
-
 :root {
     --blanco_tenue: #eeebeb;
     --azul_principal: #436ff3;
@@ -19,6 +24,13 @@
     --blue: blue;
     --blanco: #ffffff;
     --negro: #000;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
+    height: 100vh;
+    color: var(--blanco_tenue);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .volver{
@@ -37,6 +49,10 @@
     a {
         color: var(--blanco);
         font-weight: 800;
+
+        &:hover{
+            color: var(--azul_marino);
+        }
     }
 }
 

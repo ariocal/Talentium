@@ -74,7 +74,6 @@ section.header_y_container {
                         font-weight: bolder;
                         width: 100%;
 
-
                         &:hover{
                             background-color: var(--azul_oscuro);
                         }
@@ -82,7 +81,6 @@ section.header_y_container {
                             transform: scale(90%);
                         }
                     }
-
                 }
             }
         }
