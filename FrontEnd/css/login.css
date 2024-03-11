@@ -5,11 +5,6 @@ body {
     position: relative;
 }
 
-.volver {
-    position: absolute;
-    top: 2%;
-}
-
 .login_card {
     max-width: 280px;
     width: 300px;
