@@ -1,7 +1,8 @@
 
 
   .aceptarOrden {
-    box-shadow: 1px 1px 1px 2px black;
+    /* box-shadow: 1px 1px 1px 2px black; */
+    /* box-shadow: -2px 2px 3px 2px rgba(253, 251, 251, 0.477);
     border-radius: 8px;
     width: min(20em, 100%);
     height: min(100%, 15em);
@@ -12,10 +13,27 @@
     transition: background-color 0.3s transform 0.2s;
     position: relative;
     margin-top: 1em;
-    text-align: center;
+    text-align: center; */
+
+    /* border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.8); */
+    max-width: 300px;
+  width: 300px;
+  height: 350px;
+  display: grid;
+  grid-template-rows: 3;
+  gap: 15px;
+  background-color: var(--azul_principal);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 
     textarea {
-      display: inline;
+      /* display: inline;
       max-width: 100%;
       max-height: fit-content;
       text-align: center;
@@ -23,7 +41,18 @@
       margin-bottom: 1em;
       border-radius: 15px;
       box-shadow: 1px 1px 1px 1px black;
-      border: none;
+      border: none; */
+
+      max-width: 100%;
+      max-height: fit-content;
+      text-align: center;
+      opacity: 80%;
+      margin-bottom: 15px;
+      padding: 3px;
+      box-shadow: 0px 2px 2px rgba(251, 245, 245, 0.364);
+      border-radius: 8px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1em;
     }
 
     input{

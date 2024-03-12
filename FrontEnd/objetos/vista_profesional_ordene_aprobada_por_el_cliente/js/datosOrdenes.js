@@ -25,9 +25,9 @@ export class datosOrdenes {
         });
 
         this.vistaDatos = document.createElement('div');
-        this.vistaDatos.innerText = `nombre: ${this.profesional.name}
-                                     apellido: ${this.profesional.lastname}
-                                     telefono: 3234981742`;
+        this.vistaDatos.innerText = `Nombre: ${this.profesional.name}
+                                     Apellido: ${this.profesional.lastname}
+                                     Telefono: 3234981742`;
 
         const cancelarTrabajo = document.createElement('button');
         cancelarTrabajo.innerText = "Cancelar trabajo";

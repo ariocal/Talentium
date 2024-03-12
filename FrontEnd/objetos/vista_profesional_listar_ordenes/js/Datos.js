@@ -27,8 +27,8 @@ export class datos {
     static profesional() {
         return {
             "id": 10,
-            "name": "Puan",
-            "lastname": "perez",
+            "name": "Juan",
+            "lastname": "Perez",
             "cuit": "20-77234567-0",
             "cbu": "20772345670",
             "rating": 5,

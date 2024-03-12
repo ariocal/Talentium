@@ -1,6 +1,6 @@
 @import url("../../css/style.css"); /*importé mis estilos*/
-/* @import url('./profesionalAceptarOrden.css'); */
-@import url('./profesionalListarOrden.css');
+@import url('./profesionalAceptarOrden.css');
+/* @import url('./profesionalListarOrden.css'); */
 
 
 * {
@@ -8,13 +8,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* body {
-    height: 100vh;
-    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
-    color: var(--blanco_tenue);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
 
 main {
     width: 100%;

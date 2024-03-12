@@ -1,11 +1,10 @@
 export class CartelPuntuar {
     constructor(ordenDto, mensaje, divPadre) {
         this.orden = ordenDto;
-        this.mensaje = mensaje ?? 'tu opinion nos importa, ¿como fue tu experiencia?';
+        this.mensaje = mensaje ?? 'Tu opinión nos importa, ¿cómo fue tu experiencia?';
         this.divPadre = divPadre ?? 'main';
         this.rating;
         this.div;
-      
     }
 
     crearCartel() {
