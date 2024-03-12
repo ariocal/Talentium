@@ -1,3 +1,5 @@
+
+
 #front {
   /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   background: inherit;
@@ -8,55 +10,67 @@
   overflow: scroll;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
   align-items: center;
   margin: 0 auto; */
 
   max-width: 1000px;
-  width: 80%;
-  height: 350px;
-  display: grid;
-  grid-template-rows: 3;
-  gap: 15px;
+  width: min(100%,50em);
+  height: 80vh;
+  gap: 18px;
   background-color: var(--azul_principal);
-  border-radius: 10px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.8);
   padding: 30px;
   position: absolute;
-  top: 50%;
+  top: 30px;
   left: 50%;
-  translate: -50% -50%;
-
+  translate: -50% 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  hyphens: auto;
+  overflow-y: auto;
+  
   .CrearOrden {
-    box-shadow: 1px 1px 1px 2px black;
-    border-radius: 15px;
+    box-shadow: -2px 2px 3px 2px rgba(253, 251, 251, 0.477);
+    border-radius: 8px;
     width: min(20em, 100%);
+    width: 100%;
     height: fit-content;
+    padding: 10px;
     display: grid;
     justify-content: baseline;
     align-items: center;
     transition: background-color 0.3s transform 0.2s;
     position: relative;
+    text-align: left;
 
-    text-align: center;
-
-    textarea, input, button {
-     display: none;
+    &:nth-child(odd) {
+      background-color: var(--azul_oscuro);
     }
 
-    div{
-      display: block;
-      width: inherit;
-      &:hover {
-        background-color: rgba(0, 0, 255, 0.5);
-        border-radius: inherit;
-      }
+    textarea,
+    input,
+    button {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var(--azul_claro);
 
       &:active {
         transform: scale(0.95);
       }
     }
-  } 
-  
+
+    div {
+      display: block;
+      /* width: inherit; */
+
+
+
+    }
+  }
+
 }

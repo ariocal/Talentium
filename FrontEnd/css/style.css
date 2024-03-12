@@ -1,11 +1,5 @@
 
-body {
-    min-height: 100hv;
-    height: auto;
-    background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
-    color: var(--blanco_tenue);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 * {
     padding: 0;
     margin: 0;
@@ -25,14 +19,13 @@ body {
     --blanco: #ffffff;
     --negro: #000;
 }
-
 body {
+    height: auto;
+    min-height: 100vh;
     background: linear-gradient(to bottom, var(--azul_principal), #99b6f7a7);
-    height: 100vh;
     color: var(--blanco_tenue);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .volver{
     display: flex;
     justify-content: left;
