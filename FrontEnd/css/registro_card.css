@@ -121,8 +121,10 @@ body {
         cursor: pointer;
         width: 100%;
         height: 100%;
-        a button{
+        text-align: center;
+        a{
             color: var(--blanco);
+            display: block;
         }
         &:hover {
             color: var(--blanco);

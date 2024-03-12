@@ -48,12 +48,15 @@ section.header_y_container {
                     border-radius: 8px;
                     box-shadow: -4px 5px 5px rgba(0, 0, 0, 0.5);
                     color: var(--blanco);
+                    
 
                     &:hover {
                         cursor: pointer;
+                        filter: brightness(90%);
+
                     }
                     &:active {
-                        transform: scale(90%);
+                        transform: scale(95%);
                     }
                     a {
                         width: 20vw;

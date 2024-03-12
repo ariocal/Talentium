@@ -54,7 +54,7 @@ section.header_y_container {
                         filter: brightness(60%);
                     }
                     &:active {
-                        transform: scale(90%);
+                        transform: scale(95%);
                     }
                     a {
                         width: 20vw;
