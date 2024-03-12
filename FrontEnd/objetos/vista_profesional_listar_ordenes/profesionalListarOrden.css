@@ -1,5 +1,5 @@
 #front {
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
   background: inherit;
   backdrop-filter: blur(10px);
   width: min(100%,50em);
@@ -11,7 +11,22 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto; */
+
+  max-width: 1000px;
+  width: 80%;
+  height: 350px;
+  display: grid;
+  grid-template-rows: 3;
+  gap: 15px;
+  background-color: var(--azul_principal);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 
   .CrearOrden {
     box-shadow: 1px 1px 1px 2px black;
