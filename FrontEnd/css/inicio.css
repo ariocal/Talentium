@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 15px 25px;
 
     .logo img {
         height: 6rem;
@@ -17,6 +17,7 @@ header {
 
     .menu {
         display: flex;
+        margin-top: 36px;
 
         p {
             color: #fff;
@@ -28,11 +29,13 @@ header {
             a {
                 color: #fff;
             }
+
             &:hover {
                 background-color: #f0f2f54b;
                 box-shadow: -5px 5px 5px rgba(0, 0, 0, .2);
                 border-radius: 5px;
             }
+
             &:active {
                 background-color: #0928574b;
                 box-shadow: -5px 5px 5px rgba(250, 248, 248, 0.37);
@@ -86,7 +89,6 @@ header {
             background-color: var(--azul_oscuro);
             width: 30px;
             height: 30px;
-            ;
 
             &:hover {
                 color: var(--azul_claro);
@@ -95,7 +97,6 @@ header {
             &:active {
                 color: rgba(255, 0, 0, 0.8);
             }
-
         }
     }
 }
@@ -112,9 +113,13 @@ header {
     left: 0;
 }
 
+main {
+    height: auto;
+    padding: 0 20px;
+}
+
 .inicio {
     padding: 20px;
-    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -133,27 +138,27 @@ header {
 }
 
 .proceso {
-    height: 100vh;
     color: black;
+    margin-bottom: 50px;
 
     h1 {
         text-align: center;
         font-size: 1.8em;
-        margin: 2.5em 0;
+        margin: 2em 0;
     }
 
     .pasos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 0 2em;
-        gap: 1em;
+        gap: 1.2em;
 
         div {
             background-color: #97b0fae2;
             padding: 20px;
             border: 1px solid #436ff359;
             box-shadow: -2px 4px 8px rgba(82, 82, 82, 0.2);
-            height: 55vh;
+            height: auto;
             line-height: 1.8em;
 
             h3 {
@@ -170,7 +175,7 @@ header {
 
 footer {
     padding: 20px 0 0;
-    align-items:flex-start;
+    align-items: flex-start;
     text-align: center;
     color: black;
 
@@ -182,21 +187,24 @@ footer {
         align-items: center;
         text-align: left;
         line-height: 1.5em;
+        padding: 0 20px;
 
         img {
             height: 8rem;
             filter: hue-rotate(350deg);
-            margin-left: 20px;
         }
+
         a {
             color: var(--blue);
 
             &:hover {
                 color: white;
             }
+
             &:active {
                 color: black;
             }
+
             img {
                 width: 18px;
                 height: 18px;
@@ -215,5 +223,120 @@ footer {
         margin-top: 40px;
     }
 
+}
 
+@media (max-width: 1000px) {
+    .inicio {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "img"
+            "txt";
+        gap: 20px;
+
+        .txt {
+            grid-area: txt;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .img {
+            grid-area: img;
+
+            img {
+                width: 90vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .proceso .pasos {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer .columnas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "colLogo col3"
+            "col1 col2";
+
+        .col-1 {
+            grid-area: col1;
+        }
+        .col-2 {
+            grid-area: col2;
+        }
+        .col-3 {
+            grid-area: col3;
+        }
+        .col-logo {
+            grid-area: colLogo;
+        }
+    }
+
+    footer .columnas div {
+        text-align: center;
+    }
+
+    
+}
+@media (max-width: 700px) {
+    header {
+        padding: 10px 15px;
+        
+        .menu {
+            flex-direction: column;
+            margin-top: 20px;
+            
+            p {
+                margin: 5px 0;
+                a {
+                    padding: 8px;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: #f0f2f54b;
+                        box-shadow: none;
+                    }
+                    &:active {
+                        background-color: #0928574b;
+                        transform: scale(90%);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    footer .columnas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "colLogo"
+            "col1" 
+            "col2"
+            " col3";
+
+        .col-1 {
+            grid-area: col1;
+        }
+        .col-2 {
+            grid-area: col2;
+        }
+        .col-3 {
+            grid-area: col3;
+        }
+        .col-logo {
+            grid-area: colLogo;
+            margin-left: -50px;
+            padding: 0;
+        }
+    }
+
+    footer .columnas div {
+        text-align: center;
+    }
 }

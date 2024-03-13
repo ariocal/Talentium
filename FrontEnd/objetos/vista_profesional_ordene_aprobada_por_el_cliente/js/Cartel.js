@@ -1,7 +1,7 @@
 export class Cartel {
 
     constructor(mensaje,ordenDato,datosOrdenes, divPadre) {
-        this.mensaje = mensaje ?? '¿estas seguro?';
+        this.mensaje = mensaje ?? '¿Estás seguro?';
         this.divPadre = divPadre ?? 'main';
         this.div;
         this.orden = ordenDato;
