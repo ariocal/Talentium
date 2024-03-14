@@ -3,34 +3,15 @@
 @import url("header_y_container.css");
 
 body {
+    color: var(--blanco_tenue);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-height: 100vh;
+    height: 100vh;
     background-color: var(--azul_claro);
     display: flex;
 }
 
-
 section.header_y_container {
-    .recuadro {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        background-color: var(--azul_masClaro);
-        min-width: 100%;
-        height: 90%;
-        border: 1px outset var(--blanco_tenue);
-        border-radius: 5px;
-        margin: 0 15px;
-
-
-        div.contenidoRecuadro {
-            color: black;
-            text-align: center;
-            display: grid;
-            justify-items: center;
-            padding: 20px 0 30px 0;
-
-            h2 {
-                margin-bottom: 20px;
-            }
-
             form.perfil_form {
                 display: grid;
                 grid-template-columns: repeat(3, 50%);

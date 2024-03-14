@@ -12,7 +12,10 @@ body {
         display: grid;
         grid-template-areas: "aside" "header_y_container";
     }
-
+    .volver{
+        font-weight: 800;
+        color: white;
+    }
     section.header_y_container {
         grid-template-rows: 10% 90%;
         width: 80%;
