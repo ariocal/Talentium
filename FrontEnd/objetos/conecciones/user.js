@@ -24,10 +24,11 @@ export class User {
         });
 
         if (response.ok) {
-            const user = await response.json();
-            return user;
+            return await response.json();
+            //console.log(user);
+           // return user;
         } else {
-            throw new Error('Error al crear el usuario');
+            return await null
         }
     }
 
