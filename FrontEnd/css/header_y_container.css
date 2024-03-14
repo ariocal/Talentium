@@ -10,7 +10,7 @@ body {
 
     @media (max-width: 600px) {
         display: grid;
-        grid-template-areas: "toggle-aside" "aside" "header_y_container";
+        grid-template-areas: "aside" "header_y_container";
     }
 
     section.header_y_container {
