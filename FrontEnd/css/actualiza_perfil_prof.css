@@ -12,64 +12,124 @@ body {
 }
 
 section.header_y_container {
-            form.perfil_form {
-                display: grid;
-                grid-template-columns: repeat(3, 50%);
+    .contenidoRecuadro {
+        background-color: pink;
+
+        form.perfil_form {
+            display: grid;
+            grid-template-columns: repeat(3, 50%);
+            gap: 20px;
+            justify-content: center;
+            width: 50%;
+
+            @media (max-width: 1100px){
+                grid-template-columns: repeat(3, 30%);
+                background-color: red;
+            }
+            @media (max-width: 900px){
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(5, auto);
                 gap: 20px;
-                justify-content: center;
-                width: 50%;
+                grid-template-areas: 
+                "nombre     calle"
+                "apellido   numero"
+                "cuit       provincia"
+                "celular    localidad"
+                "cbu        especialidad";
 
-                .perfil_columna_izq,
-                .perfil_columna_der {
-                    width: 100%;
-                }
-
-                .form-item {
-                    margin-bottom: 10px;
-                    text-align: left;
-                    font-weight: bolder;
-                    font-size: 0.95em;
-
-                    input,
-                    select {
-                        width: 100%;
-                        padding: 8px;
-                        margin-top: 8px;
-                        border: none;
-                        border-radius: 8px;
-                        font-size: 0.95em;
-                    }
-
-                    .readonly{
-                        background-color: var(--azul_masClaro);
-                        border: 1px solid white;
-                    }
-                }
+                background-color: rgb(221, 255, 0);
             }
 
-            .boton_centrado {
-                background-color: var(--azul_principal);
-                color: var(--blanco_tenue);
-                padding: 10px;
-                border: none;
-                border-radius: 8px;
-                border: 1.5px ridge var(--azul_claro);
-                cursor: pointer;
-                font-size: 1em;
-                font-weight: bolder;
-                width: 316%;
-                border: 4px outset var(--azul_claro);
+            .perfil_columna_izq,
+            .perfil_columna_centro, 
+            .perfil_columna_der {
+                width: 100%;
+            }
 
-                a {
-                    color: var(--blanco);
-                    display: block;
+            .form-item {
+                margin-bottom: 10px;
+                text-align: left;
+                font-weight: bolder;
+                font-size: 0.95em;
+
+                /* @media (max-width: 900px){
+                    .nombre{
+                        grid-area: nombre;
+                    }     
+                    .apellido{
+                        grid-area: apellido;
+                    }
+                    .calle{
+                        grid-area: calle;
+                    }   
+                    .numero{
+                        grid-area: numero;
+                    }
+                    .cuit{
+                        grid-area: cuit;
+                    }       
+                    .provincia{
+                        grid-area: provincia;
+                    }
+                    .localidad{
+                        grid-area: localidad;
+                    }
+                    .cbu{
+                        grid-area: cbu;
+                    }        
+                    .especialidad{
+                        grid-area: especialidad;
+                    }
+                    background-color: rgb(221, 255, 0);
+                } */
+
+                input,
+                select {
+                    width: 100%;
+                    padding: 8px;
+                    margin-top: 8px;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 0.95em;
                 }
-                &:hover {
-                    background-color: var(--azul_oscuro);
+
+                .readonly {
+                    background-color: var(--azul_masClaro);
+                    border: 1px solid white;
                 }
-                &:active {
-                    transform: scale(95%);
-                }
+            }
+        }
+
+        .boton_centrado {
+            background-color: var(--azul_principal);
+            color: var(--blanco_tenue);
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            border: 1.5px ridge var(--azul_claro);
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bolder;
+            width: 316%;
+            height: 50px;
+            line-height: 25px;
+            border: 4px outset var(--azul_claro);
+            
+            @media (max-width: 900px){
+                width: 100%
+            }
+
+            a {
+                color: var(--blanco);
+                display: block;
+            }
+
+            &:hover {
+                background-color: var(--azul_oscuro);
+            }
+
+            &:active {
+                transform: scale(95%);
             }
         }
     }

@@ -91,7 +91,7 @@ body {
             grid-template-rows: auto 1fr;
             background-color: var(--azul_masClaro);
             min-width: 100%;
-            height: auto;
+            height: calc(100% - 10%);
             border: 1px outset var(--blanco_tenue);
             border-radius: 5px;
             margin: 0 15px;
