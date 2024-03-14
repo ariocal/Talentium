@@ -24,11 +24,12 @@ export class User {
         });
 
         if (response.ok) {
-            return await response.json();
+            const user = await response.json();
+            const jwtToken = response.headers.get('Authorization');
             //console.log(user);
-           // return user;
+            return user;
         } else {
-            return await null
+            return  null;
         }
     }
 

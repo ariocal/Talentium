@@ -1,37 +1,53 @@
 import { cartelAviso } from './cartel_aceptar_cancelar/cartelAviso.js';
 
+export class Util{
 
-class guardarSesionStorage {
-    constructor(nombre, dato, padre) {
+    static esPromesa(variable){
+        return Promise.resolve(variable) instanceof Promise;
+      }
+
+      static guardarSesionStorage(nombre, dato, padre) {
         try {
-            sessionStorage.setItem(nombre, dato);
+            const datoParce =JSON.stringify(dato);
+           // console.log('datoParce: '+ datoParce);
+            sessionStorage.setItem(nombre,datoParce );
         } catch (error) {
             new cartelAviso('error al guardar el usuario', padre);
 
         }
     }
-}
 
-class recuperarSesionStorage {
-    constructor(nombre, padre) {
+
+    static recuperarSesionStorage(nombre, padre) {
         try {
-            return sessionStorage.getItem(nombre);
+            const recuperarUsuario = sessionStorage.getItem(nombre);
+            //console.log('recuperarUsuario: '+ recuperarUsuario);
+            return recuperarUsuario;
         } catch (error) {
             new cartelAviso('error al recuperar el usuario', padre);
 
         }
     }
-}
-// const jwtToken = response.headers.get('Authorization');
 
-export class guardarUsuario {
-    constructor(dato, padre) {
-        new guardarSesionStorage('usuario', dato, padre);
+    static  guardarUsuario(dato, padre) {
+         Util.guardarSesionStorage('usuario', dato, padre);
     }
+
+
+    static reuperarUsuario (padre) {
+        return   Util.recuperarSesionStorage('usuario', padre);
+       }
+
+
 }
 
-export class reuperarUsuario {
-    constructor(padre) {
-        new recuperarSesionStorage('usuario', padre);
-    }
-}
+  
+
+
+
+
+
+
+
+
+
