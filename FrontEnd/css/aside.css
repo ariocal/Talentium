@@ -5,46 +5,10 @@ body {
 
     @media (max-width: 649px) {
         display: grid;
-        grid-template-areas: "toggle-aside" "aside" "header_y_container";
+        grid-template-areas: "aside" "header_y_container";
     }
 
-    .toggle-aside {
-        padding: 8px;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        border-radius: 50%;
-        border: none;
-        background-color: aqua;
-        cursor: pointer;
-        z-index: 2;
-        display: block;
 
-        @media (max-width: 650px) {
-            grid-area: toggle;
-            display: block;
-        }
-    }
-
-    .toggle-aside img {
-        width: 55px;
-        height: 55px;
-        display: block;
-
-        @media (max-width: 650px) {
-            display: block;
-        }
-    }
-    .aside-cerrado {
-        transform: translateX(-100%);
-
-        @media (max-width: 650px) {
-            .aside-cerrado {
-                width: 0;
-                overflow: hidden;
-            }
-        }
-    }
     aside {
             width: 18%;
             height: 100%;
