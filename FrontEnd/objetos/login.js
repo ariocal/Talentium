@@ -20,7 +20,7 @@ registrarse.addEventListener('click', async () => {
 
     let respuesta = await userCreado.login();
     
-    if(respuesta == null) new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
+    //if(respuesta == null) new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
 
 
     if (respuesta != null) Util.guardarUsuario(respuesta);
