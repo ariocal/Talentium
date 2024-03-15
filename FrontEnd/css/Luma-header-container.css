@@ -12,35 +12,32 @@ body {
         display: grid;
         grid-template-areas: "aside" "header_y_container";
     }
-    div.volver span{
+    .volver{
         font-weight: 800;
         color: white;
-        &:hover{
-            color: var(--azul_marino);
-            cursor: pointer;
-        }
     }
     section.header_y_container {
         grid-template-rows: 10% 90%;
-        width: calc(100vw - 20%);
+        width: 80%;
 
         @media (max-width: 1100px) {
-            width: calc(100vw - 28%);
+            width: 80%;
         }
 
         @media (max-width: 900px) {
             padding-right: 5px;
-            width: calc(100vw - 27%);
+            width: 75%;
         }
 
         @media (max-width: 700px) {
-            width: calc(100vw - 25%);
+            width: 70%;
         }
 
-        @media (max-width: 649px) {
+        @media (max-width: 600px) {
             grid-area: header_y_container;
-            min-width: 100%;
-            height: auto;
+            width: 100%;
+            /*padding-right: 40px;*/
+            display: none;
         }
 
         .hola_buscador {
@@ -50,8 +47,13 @@ body {
             align-items: start;
             justify-content: space-between;
             padding: 15px 0;
-            max-width: 95vw;
+            width: 80vw;
             color: white;
+
+            @media (max-width: 900px) {
+                width: 75vw;
+                padding-right: 15px
+            }
 
             h4 {
                 margin-left: 15px;
@@ -88,22 +90,15 @@ body {
             display: grid;
             grid-template-rows: auto 1fr;
             background-color: var(--azul_masClaro);
-            width: calc(100% - 2%);
-            min-height: calc(100% - 10%);
+            min-width: 100%;
             height: auto;
             border: 1px outset var(--blanco_tenue);
             border-radius: 5px;
             margin: 0 15px;
 
-    
-            @media (max-width: 700px) {
-                min-width: calc(100vw - 7%);
+            @media (max-width: 900px) {
+                min-width: 98%;
             }
-    
-            @media (max-width: 649px) {
-                width: calc(100vw - 32%);
-            }
-            
 
             div.contenidoRecuadro {
                 color: black;
@@ -111,7 +106,13 @@ body {
                 display: grid;
                 justify-items: center;
                 padding: 20px 0 30px 0;
-              
+
+                @media (max-width: 900px) {
+                    form.perfil_form {
+                        width: 80%;
+                    }
+                }
+
                 h2 {
                     margin-bottom: 20px;
                 }
@@ -127,4 +128,3 @@ body {
         }
     }
 }
-

@@ -4,6 +4,19 @@
 body {
     height: 100vh;
     position: relative;
+
+    .volver span{
+        position: absolute;
+        font-weight: 800;
+        color: white;
+        &:hover{
+            color: var(--azul_marino);
+            cursor: pointer;
+        }
+        &:active{
+            transform: scale(115%);
+        }
+    }
 }
 
 .login_card {
