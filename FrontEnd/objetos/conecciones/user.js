@@ -17,6 +17,8 @@ export class User {
             password: this.password,
             avatar: this.avatar
         };
+try {
+    
 
         const response = await fetch(url, {
             method: 'POST',
@@ -40,6 +42,10 @@ export class User {
         } else {
             return  null;
         }
+
+    } catch (error) {
+    
+    }
       
     }
 
@@ -73,7 +79,7 @@ export class User {
         }
 
     } catch (error) {
-        new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
+      //  new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
 
     }
 }
