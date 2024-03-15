@@ -1,4 +1,4 @@
-import { Util } from '../Util.js';
+
 
 export class User {
     constructor(emai, passwor, avata) {
@@ -7,10 +7,10 @@ export class User {
         this.avatar = avata ?? '';
 
     }
-    async conexionApi(urlvs = 'http://localhost:8080/usuarios') {
+    async conexionApi() {
 
 
-        const url = urlvs;
+        const url =  'http://localhost:8080/usuarios';
         const userData = {
             email: this.email,
             password: this.password,
@@ -43,7 +43,33 @@ export class User {
     }
 
     async login(){
-        this.conexionApi("http://localhost:8080/usuarios/login");
-    }
-}
+        const url =  'http://localhost:8080/usuarios/login';
+        const userData = {
+            email: this.email,
+            password: this.password
+        };
 
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+        
+        
+        
+        
+
+        if (response.ok) {
+
+            const user = await response.json();
+     
+           
+       // console.log('Authorization: '+ response.headers.get('Authorization'));
+            return user;
+        } else {
+            return  null;
+        }
+}
+}
