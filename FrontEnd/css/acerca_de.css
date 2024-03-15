@@ -3,6 +3,18 @@
 body {
     height: auto;
     min-height: 100vh;
+
+    .volver span{
+        font-weight: 800;
+        color: white;
+        &:hover{
+            color: var(--azul_marino);
+            cursor: pointer;
+        }
+        &:active{
+            transform: scale(115%);
+        }
+    }
 }
 
     .acerca_de {
@@ -34,7 +46,7 @@ body {
         }  
         
     }
-}
+
 
 
 

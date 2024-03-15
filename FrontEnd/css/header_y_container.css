@@ -12,9 +12,13 @@ body {
         display: grid;
         grid-template-areas: "aside" "header_y_container";
     }
-    .volver{
+    div.volver span{
         font-weight: 800;
         color: white;
+        &:hover{
+            color: var(--azul_marino);
+            cursor: pointer;
+        }
     }
     section.header_y_container {
         grid-template-rows: 10% 90%;
