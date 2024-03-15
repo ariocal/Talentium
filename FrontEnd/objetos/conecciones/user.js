@@ -1,3 +1,4 @@
+import { cartelAviso } from '../cartel_aceptar_cancelar/cartelAviso.js';
 
 
 export class User {
@@ -16,6 +17,8 @@ export class User {
             password: this.password,
             avatar: this.avatar
         };
+try {
+    
 
         const response = await fetch(url, {
             method: 'POST',
@@ -39,6 +42,10 @@ export class User {
         } else {
             return  null;
         }
+
+    } catch (error) {
+    
+    }
       
     }
 
@@ -49,6 +56,9 @@ export class User {
             password: this.password
         };
 
+        try {
+            
+    
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -56,10 +66,6 @@ export class User {
             },
             body: JSON.stringify(userData)
         })
-        
-        
-        
-        
 
         if (response.ok) {
 
@@ -71,5 +77,10 @@ export class User {
         } else {
             return  null;
         }
+
+    } catch (error) {
+      //  new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
+
+    }
 }
 }
