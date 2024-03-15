@@ -1,4 +1,5 @@
-@import url("../../css/style.css");/*importé mis estilos*/
+@import url("../../css/style.css");
+/*importé mis estilos*/
 
 #cartel {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -6,6 +7,7 @@
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
     min-width: 300px;
+    max-width: 40em;
     line-height: 1.8em;
     width: auto;
     text-align: center;
@@ -15,6 +17,9 @@
     position: sticky;
     z-index: 1;
     /* background-color: rgba(119, 136, 153, 20%); */
+    /*centrando el cartel*/
+    margin: auto;
+    transform: translateY(50%);
 
     div {
         font-size: 1.2em;
@@ -42,6 +47,7 @@
         &:hover {
             filter: brightness(70%);
         }
+
         &:active {
             transform: scale(.9);
         }
