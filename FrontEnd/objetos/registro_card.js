@@ -28,7 +28,7 @@ registrarse.addEventListener('click', async () => {
     if (respuesta != null) registrarse.href = "invitaAregistrar.html";
 
      
-    alert(Util.reuperarUsuario());
+    //alert(Util.reuperarAuthorization());
 
   } else {
     new cartelAviso('los campos usuario y contraseña no deben estar vacios')

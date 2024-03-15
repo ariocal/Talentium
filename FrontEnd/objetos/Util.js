@@ -1,16 +1,16 @@
 import { cartelAviso } from './cartel_aceptar_cancelar/cartelAviso.js';
 
-export class Util{
+export class Util {
 
-    static esPromesa(variable){
+    static esPromesa(variable) {
         return Promise.resolve(variable) instanceof Promise;
-      }
+    }
 
-      static guardarSesionStorage(nombre, dato, padre) {
+    static guardarSesionStorage(nombre, dato, padre) {
         try {
-            const datoParce =JSON.stringify(dato);
-           // console.log('datoParce: '+ datoParce);
-            sessionStorage.setItem(nombre,datoParce );
+            const datoParce = JSON.stringify(dato);
+            // console.log('datoParce: '+ datoParce);
+            sessionStorage.setItem(nombre, datoParce);
         } catch (error) {
             new cartelAviso('error al guardar el usuario', padre);
 
@@ -29,19 +29,31 @@ export class Util{
         }
     }
 
-    static  guardarUsuario(dato, padre) {
-         Util.guardarSesionStorage('usuario', dato, padre);
+    static guardarUsuario(dato, padre) {
+        Util.guardarSesionStorage('usuario', dato, padre);
     }
 
 
-    static reuperarUsuario (padre) {
-        return   Util.recuperarSesionStorage('usuario', padre);
-       }
+    static reuperarUsuario(padre) {
+        return Util.recuperarSesionStorage('usuario', padre);
+    }
+
+    static guardarAuthorization(dato, padre) {
+        try {
+            sessionStorage.setItem('Authorization', dato);
+        } catch (error) {
+            new cartelAviso('error al guardar el usuario', padre);
+
+        }
+    }
 
 
+    static reuperarAuthorization(padre) {
+        return Util.recuperarSesionStorage('Authorization', padre);
+    }
 }
 
-  
+
 
 
 
