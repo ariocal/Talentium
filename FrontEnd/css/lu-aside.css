@@ -2,43 +2,93 @@
 
 body {
     position: relative;
-
+/*
     @media (max-width: 650px) {
         display: grid;
         grid-template-areas: "aside" "header_y_container";
     }
+   */
+   
 
+    /*mi modificacion________________________*/
+    .nav-toggle{
+        color: white;
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+        cursor: pointer;
+        display:none;/*para que no sea vea en el dispositivo*/
+    }
+
+    @media (max-width: 600px) {
+        aside{
+            display: none; 
+            min-width: 200px;     
+                    
+            /*Deplazamiento hacia la derecha*/
+            .logo_y_cliente{ 
+                width: 100%;
+                
+                height: calc(100%-50%);/*para calcular el alto automáticamente*/  
+           
+                transition: right 0.3s;
+
+                img.logo {
+                    width: 100%;
+                    padding: 12px;
+                    padding-bottom: 0;
+                }
+             }
+        }
+
+        .nav-toggle{
+            display: block;
+        }
+ 
+        .nav-toggle:focus(:focus-visible){
+             outline: none;
+        }
+
+                         
+        .aside_visible{
+             display:block;
+             min-width: 200px; 
+               
+        }
+        ._visible{
+            width: auto;
+        } 
+    }
+
+/*_____________________________________________________*/
 
     aside {
             width: 18%;
-            max-height: 100%;
+            height: 100%;
             background-color: var(--azul_principal);
             transition: all .3 ease;
-            /* position: fixed; */
 
             @media (max-width: 1100px) {
-                width: 25%;
-            }
-            @media (max-width: 800px) {
-                width: 29%;
-            }
-            @media (max-width: 650px) {
-                grid-area: aside;
-                min-width: 100%;
-                z-index: 1;
-                display: block;
+                width: auto;
+                min-width: 25%;
             }
 
+           
+           @media (max-width: 650px) {
+                grid-area: aside;
+                width: 80vw;
+                z-index: 1;
+                /* display: fixed; */
+            }
+           
+
+           
             img.logo {
                 width: 90%;
                 padding: 12px;
                 padding-bottom: 0;
-                
-
-                @media (max-width: 650px) {
-                    width: 65%;
-                    translate: 70px;
-                }
             }
             div.avatarCliente {
                 display: grid;
@@ -65,7 +115,14 @@ body {
                     font-weight: 200;
                     overflow: hidden;
                 }
+
+                
             }
+
+
+            
+
+
             nav {
                 background-color: var(--azul_oscuro);
                 padding: 20px;
@@ -79,7 +136,7 @@ body {
                 }
 
                 @media (max-width: 950px) {
-                    height: calc(100% - 36%);
+                    height: calc(100% - 34%);
                 }
 
                 @media (max-width: 780px) {
@@ -88,9 +145,37 @@ body {
 
                 @media (max-width: 650px) {
                     height: calc(100% - 32%);
-                    min-height: 1000%;
                 }
+/*mi modificacion_______________________________________________________*/
+                @media (max-width: 600px) {
+                    
+                    background: none;
 
+                     .nav-menu{
+                        flex-direction: column;
+                        align-items: center;
+                        margin-right: 20px;
+                        background-color: var(--azul_oscuro);
+                        border-top-right-radius: 60px;
+                        position: fixed;
+                       
+                        padding: 10px 0;
+                        height: calc(100%-31%);/*para calcular el alto automáticamente*/
+                        overflow-y: auto;/*agrega u scrool cuando sea necesario*/
+                        /*Deplazamiento hacia la derecha*/
+                        top:40%;
+                        right: 100%;
+                        transition: right 0.3s;
+                     }
+                     .nav-menu_visible{
+                        display:block;
+                        right:65%;
+                        margin-right: 5px;   
+                     } 
+
+                    
+                }
+/*______________________________________________________________*/
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -132,7 +217,7 @@ body {
                         }
                         &.cerrar {
                             display: flex;
-                            margin: 35px auto auto 5px;
+                            margin: 60px 8px auto 8px;
                             align-items: center;
                             border-radius: 7px;
                             padding: 6px 10px;
@@ -159,5 +244,10 @@ body {
                     }
                 }
             }
+
+
         }
+
+       
+        
     }
