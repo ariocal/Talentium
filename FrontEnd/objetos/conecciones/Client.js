@@ -1,0 +1,68 @@
+import { cartelAviso } from '../cartel_aceptar_cancelar/cartelAviso.js';
+
+export class Client {
+    constructor(nameDto, lastnameDto, dniDto, userId, street, number, province, location) {
+        this.name = nameDto;
+        this.lastname = lastnameDto;
+        this.dni = dniDto;
+        this.user = {
+            "id": userId
+        }
+        this.direction = {
+            "street": street,
+            "number": number,
+            "province": province,
+            "location": location
+        }
+    }
+
+
+    async conexionApi() {
+     
+
+        const url = 'http://localhost:8080/api/client';
+        const userData = {
+            name: this.name,
+            lastname: this.lastname,
+            dni: this.dni,
+            user: this.user,
+            direction: this.direction
+        };
+     
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                    //'Authorization': `Bearer ${jwtToken}`
+                },
+                body: JSON.stringify(userData)
+            }).then(response => {
+                if (response.ok)return response.json();
+                throw new Error(response.status);
+            }).catch(err => {
+                //console.error("ERROR: ", err.message);
+                new cartelAviso('Ups!! error de conexion', 'h2');
+            });
+
+
+        
+  }
+}
+
+/*
+        if (response.ok) {
+
+            const cliente = await response.json();
+
+            return cliente;
+        } else {
+            return null;
+        }
+
+    } catch (error) {
+
+    }
+
+}
+
+}*/

@@ -5,8 +5,8 @@ import { Util } from './Util.js';
 
 const registrarse = document.querySelector('.login_button');
 
-registrarse.addEventListener('click', async () => {
-
+registrarse.addEventListener('click', async (event) => {
+  event.preventDefault();
   const inputs = document.querySelectorAll('input');
   const a = document.querySelector('#login');
 
@@ -20,7 +20,7 @@ registrarse.addEventListener('click', async () => {
 
     let respuesta = await userCreado.login();
     
-    if(respuesta == null) new cartelAviso('Lo siento, algo salio mal. vuelve mas tarde a intentarlo');
+    if(respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
 
 
     if (respuesta != null) Util.guardarUsuario(respuesta);
@@ -30,7 +30,7 @@ registrarse.addEventListener('click', async () => {
     //alert(Util.reuperarUsuario());
 
   } else {
-    new cartelAviso('los campos usuario y contraseña no deben estar vacios')
+    new cartelAviso('Los campos usuario y contraseña no deben estar vacíos')
 
   }
 
