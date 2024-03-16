@@ -7,15 +7,16 @@ try {
     const inputs = document.querySelectorAll('input');
     const crearPerfil = document.querySelector('#crearPerfil');
 
-    crearPerfil.addEventListener('click', async (event) => {
-        event.preventDefault();
+    crearPerfil.addEventListener('click', async () => {
+      
     
       let  user = 1;
-        let cliente =  new Client(inputs[1].value, inputs[2].value, inputs[3].value,user,
-             inputs[5].value, inputs[4].value, inputs[6].value, inputs[7].value);
-             cliente = await cliente.conexionApi() ?? NaN;
+        let cliente =  new Client(inputs[1].value, inputs[2].value, inputs[3].value,
+            inputs[4].value, user,
+             inputs[5].value, inputs[6].value, inputs[7].value, inputs[8].value);
+             cliente = await cliente.conexionApi();
              new cartelAviso('cliente: '+ cliente, 'h2');
-             if(cliente != NaN) Util.guardarCliente(cliente, 'h2');
+             if(cliente != null) Util.guardarCliente(cliente, 'h2');
     });
 
     

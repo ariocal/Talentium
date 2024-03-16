@@ -5,8 +5,8 @@ import { Util } from './Util.js';
 
 const registrarse = document.querySelector('.login_button');
 
-registrarse.addEventListener('click', async (event) => {
-  event.preventDefault();
+registrarse.addEventListener('click', async () => {
+  
   const inputs = document.querySelectorAll('input');
   const a = document.querySelector('#login');
 
@@ -20,12 +20,12 @@ registrarse.addEventListener('click', async (event) => {
 
     let respuesta = await userCreado.login();
     
-    if(respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
+    if(await respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
 
 
-    if (respuesta != null) Util.guardarUsuario(respuesta);
+    if (await respuesta != null) Util.guardarUsuario(respuesta);
     
-    if (respuesta != null) a.href = "invitaAregistrar.html";
+    if (await respuesta != null) a.href = "invitaAregistrar.html";
     
     //alert(Util.reuperarUsuario());
 

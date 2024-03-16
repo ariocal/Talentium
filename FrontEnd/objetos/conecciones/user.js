@@ -9,7 +9,7 @@ export class User {
 
     }
     async conexionApi() {
-
+       
 
         const url =  'http://localhost:8080/usuarios';
         const userData = {
@@ -36,7 +36,6 @@ try {
 
             const user = await response.json();
      
-           
        // console.log('Authorization: '+ response.headers.get('Authorization'));
             return user;
         } else {
@@ -50,6 +49,7 @@ try {
     }
 
     async login(){
+       
         const url =  'http://localhost:8080/usuarios/login';
         const userData = {
             email: this.email,
@@ -70,7 +70,10 @@ try {
         if (response.ok) {
 
             const user = await response.json();
-     
+     /* buscando el jwt en el header
+            for ([key, value] of response.headers.entries()) {
+                console.log("Clave: ", key, "valor: ", value);
+              }*/
            
        // console.log('Authorization: '+ response.headers.get('Authorization'));
             return user;
