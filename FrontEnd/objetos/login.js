@@ -1,4 +1,4 @@
-import { User } from './conecciones/user.js';
+import { User } from './conexiones/user.js';
 import { cartelAviso } from './cartel_aceptar_cancelar/cartelAviso.js';
 import { Util } from './Util.js';
 

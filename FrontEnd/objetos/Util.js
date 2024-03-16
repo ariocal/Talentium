@@ -126,7 +126,9 @@ export class Util {
             "cliente_id": 15
         }
     }
-
+    static cambiarDePagina(pageUrl) {
+        window.location.href = pageUrl;
+    }
 }
 
 
