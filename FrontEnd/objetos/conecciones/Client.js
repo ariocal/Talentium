@@ -1,3 +1,4 @@
+import { Util } from '../Util.js';
 import { cartelAviso } from '../cartel_aceptar_cancelar/cartelAviso.js';
 
 export class Client {
@@ -38,13 +39,27 @@ export class Client {
                 //'Authorization': `Bearer ${jwtToken}`
             },
             body: JSON.stringify(userData)
-        }).then(response => {
+        }).then(response =>response.json())
+        .then(data => {
+            Util.guardarCliente(data);
+            new cartelAviso( Util.reuperarCliente('h2'), 'h2');
+            console.log(Util.reuperarCliente('h2'));
+           } 
+        ).catch(err => {
+            new cartelAviso('Ups!! algo salio mal, intenta más tarde', 'h2');
+        });
+        
+        
+        
+        
+        
+        /*.then(response => {
             if (response.ok) return response.json();
             new cartelAviso('Ups!! error de datos', 'h2');
         }).catch(err => {
             //console.error("ERROR: ", err.message);
             new cartelAviso('Ups!! error de conexion', 'h2');
-        });
+        });*/
 
     }
 }

@@ -15,8 +15,8 @@ try {
             inputs[4].value, user,
              inputs[5].value, inputs[6].value, inputs[7].value, inputs[8].value);
              cliente = await cliente.conexionApi();
-             new cartelAviso('cliente: '+ cliente, 'h2');
-             if(cliente != null) Util.guardarCliente(cliente, 'h2');
+            // new cartelAviso('cliente: '+ cliente, 'h2');
+           //  if(cliente != null) Util.guardarCliente(cliente, 'h2');
     });
 
     
