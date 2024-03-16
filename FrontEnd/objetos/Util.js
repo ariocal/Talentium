@@ -12,7 +12,7 @@ export class Util {
             // console.log('datoParce: '+ datoParce);
             sessionStorage.setItem(nombre, datoParce);
         } catch (error) {
-            new cartelAviso('error al guardar el usuario', padre);
+            new cartelAviso('Error al guardar el usuario', padre);
 
         }
     }
