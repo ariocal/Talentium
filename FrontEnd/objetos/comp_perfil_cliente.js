@@ -1,7 +1,10 @@
 import { cartelAviso } from './cartel_aceptar_cancelar/cartelAviso.js';
 import { Client } from './conexiones/Client.js';
+import {Util} from './Util.js'
 
 try {
+    Util.existUser();
+    
     const inputs = document.querySelectorAll('input');
     const crearPerfil = document.querySelector('#crearPerfil');
 

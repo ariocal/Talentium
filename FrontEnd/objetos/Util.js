@@ -129,6 +129,10 @@ export class Util {
     static cambiarDePagina(pageUrl) {
         window.location.href = pageUrl;
     }
+
+   static existUser(){
+   if( Util.reuperarUsuario() == null) Util.cambiarDePagina('index.html');
+   }
 }
 
 
