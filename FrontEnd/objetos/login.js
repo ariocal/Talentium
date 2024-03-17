@@ -17,6 +17,17 @@ registrarse.addEventListener('click', async () => {
 
     await userCreado.login();
     
+
+    if(respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
+
+
+    if (respuesta != null) Util.guardarUsuario(respuesta);
+    
+    if (respuesta != null) a.href = "invitaAregistrar.html";
+    
+    //alert(Util.reuperarUsuario());
+
+
   } else {
     new cartelAviso('Los campos usuario y contraseña no deben estar vacíos')
 

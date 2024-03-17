@@ -1,23 +1,6 @@
+.aceptarOrden {
 
-
-  .aceptarOrden {
-    /* box-shadow: 1px 1px 1px 2px black; */
-    /* box-shadow: -2px 2px 3px 2px rgba(253, 251, 251, 0.477);
-    border-radius: 8px;
-    width: min(20em, 100%);
-    height: min(100%, 15em);
-    display: grid;
-    justify-content: baseline;
-    align-items: center;
-    padding: 2em;
-    transition: background-color 0.3s transform 0.2s;
-    position: relative;
-    margin-top: 1em;
-    text-align: center; */
-
-    /* border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(5, 5, 5, 0.8); */
-    max-width: 300px;
+  max-width: 300px;
   width: 300px;
   height: 350px;
   display: grid;
@@ -32,67 +15,58 @@
   left: 50%;
   translate: -50% -50%;
 
-    textarea {
-      /* display: inline;
-      max-width: 100%;
-      max-height: fit-content;
-      text-align: center;
-      opacity: 50%;
-      margin-bottom: 1em;
-      border-radius: 15px;
-      box-shadow: 1px 1px 1px 1px black;
-      border: none; */
+  textarea {
+    max-width: 100%;
+    max-height: fit-content;
+    text-align: center;
+    opacity: 80%;
+    margin-bottom: 15px;
+    padding: 3px;
+    box-shadow: 0px 2px 2px rgba(251, 245, 245, 0.364);
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+  }
 
-      max-width: 100%;
-      max-height: fit-content;
-      text-align: center;
-      opacity: 80%;
-      margin-bottom: 15px;
-      padding: 3px;
-      box-shadow: 0px 2px 2px rgba(251, 245, 245, 0.364);
-      border-radius: 8px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 1em;
+  input {
+    display: inline;
+    text-align: center;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    opacity: 50%;
+  }
+
+  button {
+    display: inline;
+    color: aliceblue;
+    background-color: inherit;
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: fit-content;
+    box-shadow: 0px 1px 1px 1px black;
+    border: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.5);
     }
 
-    input{
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:first-child {
       display: inline;
-      text-align: center;
-      border-radius: 15px;
-      width: 50%;
-      margin: 0 auto;
-      margin-bottom: 1em;
-      opacity: 50%;
-    }
-
-    button {
-      display: inline;
-      color: aliceblue;
-      background-color: inherit;
-      border-radius: 8px;
-      max-width: 100%;
-      max-height: fit-content;
-      box-shadow: 0px 1px 1px 1px black;
-      border: none;
-
-      &:hover {
-        background-color: rgba(0, 0, 255, 0.5);
-      }
-
-      &:active {
-        transform: scale(0.95);
-      }
-
-      &:first-child {
-        display: inline;
-        width: 3em;
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: .5em;
-      }
-    }
-    div{
-      display: none;
+      width: 3em;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: .5em;
     }
   }
+
+  div {
+    display: none;
+  }
+}
