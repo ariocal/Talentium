@@ -1,4 +1,4 @@
-import { User } from './conecciones/user.js';
+import { User } from './conexiones/user.js';
 import { cartelAviso } from './cartel_aceptar_cancelar/cartelAviso.js';
 import { Util } from './Util.js';
 
@@ -6,7 +6,7 @@ import { Util } from './Util.js';
 const registrarse = document.querySelector('.login_button');
 
 registrarse.addEventListener('click', async () => {
-
+  
   const inputs = document.querySelectorAll('input');
   const a = document.querySelector('#login');
 
@@ -15,11 +15,9 @@ registrarse.addEventListener('click', async () => {
 
     const userCreado = new User(inputs[0].value, inputs[1].value);
 
-
-
-
-    let respuesta = await userCreado.login();
+    await userCreado.login();
     
+
     if(respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
 
 
@@ -28,6 +26,7 @@ registrarse.addEventListener('click', async () => {
     if (respuesta != null) a.href = "invitaAregistrar.html";
     
     //alert(Util.reuperarUsuario());
+
 
   } else {
     new cartelAviso('Los campos usuario y contraseña no deben estar vacíos')
