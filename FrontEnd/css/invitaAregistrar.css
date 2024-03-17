@@ -30,6 +30,12 @@ section.header_y_container {
                     color: var(--blanco);
                     line-height: 2em;
 
+                    @media(max-width: 768px){
+                        width: 60%;
+                        height: 160px;
+
+                    }
+
                     &:hover {
                         background-color: var(--azul_oscuro);
                     }
@@ -43,5 +49,4 @@ section.header_y_container {
                 }
             }
         }
-    }
-}
+    

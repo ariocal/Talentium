@@ -28,12 +28,11 @@ body {
         }
 
         .hola_buscador {
-            width: calc(100vw - 19%);
-
             flex: 1;
             display: flex;
             grid-template-rows: 10% 90%;
             justify-content: space-between;
+            width: calc(100% - 1.5%);
             padding: 15px 0;
             margin-right: 1%;
             color: white;
@@ -41,7 +40,6 @@ body {
             @media (max-width: 649px) {
                 width: calc(100vw - 17%);
             }
-            
 
             h4 {
                 margin-left: 15px;
@@ -82,7 +80,7 @@ body {
             display: grid;
             grid-template-rows: auto 1fr;
             background-color: var(--azul_masClaro);
-            width: calc(100% - 2%);
+            width: calc(100% - 3%);
             min-height: calc(100% - 10%);
             height: auto;
             border: 1px outset var(--blanco_tenue);

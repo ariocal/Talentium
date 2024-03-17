@@ -89,7 +89,7 @@ body {
 
             @media (max-width: 650px) {
                 height: calc(100% - 32%);
-                min-height: 200%;
+                /* min-height: 200%; */
             }
 
             ul {
@@ -144,6 +144,10 @@ body {
                         background-color: var(--azul_marino);
                         border: 1px solid var(--azul_claro);
                         width: min(115px, 100%);
+
+                        @media (max-width: 650px){
+                            width: min(165px, 100%);
+                        }
 
 
                         img {

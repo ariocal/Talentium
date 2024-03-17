@@ -2,7 +2,7 @@
 @import url("aside.css");
 @import url("header_y_container.css");
 
-body {
+/* body {
     
 
     aside {
@@ -16,15 +16,15 @@ body {
             }
         }
     }
-}
+} */
 
 section.header_y_container {
-    .contenidoRecuadro {
+    /* .contenidoRecuadro {
         @media(max-width: 900px) {
             height: auto;
             width: 100%;
             padding: 0;
-        }
+        } */
 
         form.perfil_form {
             display: grid;
