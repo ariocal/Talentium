@@ -87,7 +87,7 @@ PasswordEncoder passwordEncoder;
                 .avatar(userCreated
                         .getAvatar())
                 .email(userCreated.getEmail())
-                        .password(JWToken)
+                        .password(JWToken)//agregando jwt
                 .id(userCreated.getId()).build());
     }
 
@@ -121,14 +121,20 @@ PasswordEncoder passwordEncoder;
 
         if(userCreated != null) {
             client = clientRepository.findClienteByUser(userCreated);
-            client.setLastname(JWToken);
-            if(client != null) return new ResponseEntity<>(new ClientUserDTO(client), jwtToken, HttpStatus.OK);
+
+            if(client != null){
+                client.setLastname(JWToken);//agregando jwt
+                return new ResponseEntity<>(new ClientUserDTO(client), jwtToken, HttpStatus.OK);
+            }
         }
 
         if(userCreated != null) {
              professional= professionalRepository.findProfessionalByUser(userCreated);
-             professional.setLastname(JWToken);
-            if(professional != null)  return new ResponseEntity<>(new ProfessionalDTO(professional), jwtToken, HttpStatus.OK);
+
+            if(professional != null){
+                 professional.setLastname(JWToken);//agregando jwt
+                return new ResponseEntity<>(new ProfessionalDTO(professional), jwtToken, HttpStatus.OK);
+            }
         }
 
         return ResponseEntity.created(create("/usuarios/login/"+new RegistroUsuarioDTO(userCreated).id())).headers(jwtToken)
@@ -136,7 +142,7 @@ PasswordEncoder passwordEncoder;
                 .avatar(userCreated
                         .getAvatar())
                 .email(userCreated.getEmail())
-                        .password(JWToken)
+                        .password(JWToken)//agregando jwt
                 .id(userCreated.getId()).build()
                             );
 

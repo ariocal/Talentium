@@ -31,7 +31,7 @@ export class User {
         .then(data => {
             Util.guardarLogin(data);
             //alert(Util.reuperarAuthorization());
-            Util.cambiarDePagina('sitio_del_cliente.html'); 
+            Util.cambiarDePagina('invitaAregistrar.html'); 
         }
         ).catch(err => {
             new cartelAviso('Ups!! algo salio mal, intenta más tarde', 'h2');
@@ -58,12 +58,13 @@ export class User {
         }).then(response => response.json())
         .then(data => {
             Util.guardarLogin(data);
+            console.log(Util.reuperarLogin())
             //alert(Util.reuperarAuthorization());
-            if(data.name == null)Util.cambiarDePagina('invitaAregistrar.html'); 
+            if(data.name === null)Util.cambiarDePagina('invitaAregistrar.html'); 
             Util.cambiarDePagina('sitio_del_cliente.html'); 
         }
         ).catch(err => {
-            new cartelAviso('Ups!! algo salio mal, intenta más tarde', 'h2');
+            new cartelAviso('Ups!! algo salio mal, intenta más tarde');
         });
      /* buscando el jwt en el header
             for ([key, value] of response.headers.entries()) {
