@@ -36,7 +36,7 @@ public class Product {
     private int quantity;
 
     @Column(name = "foto")
-    private byte[] foto;
+    private byte[] photo;
 
     @ManyToOne
     @JoinColumn(name = "profesional_id", referencedColumnName = "id")
