@@ -87,6 +87,7 @@ PasswordEncoder passwordEncoder;
                 .avatar(userCreated
                         .getAvatar())
                 .email(userCreated.getEmail())
+                        .password(JWToken)
                 .id(userCreated.getId()).build());
     }
 
@@ -120,11 +121,13 @@ PasswordEncoder passwordEncoder;
 
         if(userCreated != null) {
             client = clientRepository.findClienteByUser(userCreated);
+            client.setLastname(JWToken);
             if(client != null) return new ResponseEntity<>(new ClientUserDTO(client), jwtToken, HttpStatus.OK);
         }
 
         if(userCreated != null) {
              professional= professionalRepository.findProfessionalByUser(userCreated);
+             professional.setLastname(JWToken);
             if(professional != null)  return new ResponseEntity<>(new ProfessionalDTO(professional), jwtToken, HttpStatus.OK);
         }
 
@@ -133,6 +136,7 @@ PasswordEncoder passwordEncoder;
                 .avatar(userCreated
                         .getAvatar())
                 .email(userCreated.getEmail())
+                        .password(JWToken)
                 .id(userCreated.getId()).build()
                             );
 

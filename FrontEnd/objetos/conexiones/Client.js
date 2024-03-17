@@ -42,24 +42,12 @@ export class Client {
             body: JSON.stringify(userData)
         }).then(response => response.json())
             .then(data => {
-                Util.guardarCliente(data);
+                Util.guardarLogin(data);
                 Util.cambiarDePagina('sitio_del_cliente.html'); 
             }
             ).catch(err => {
                 new cartelAviso('Ups!! algo salio mal, intenta más tarde', 'h2');
             });
-
-
-
-
-
-        /*.then(response => {
-            if (response.ok) return response.json();
-            new cartelAviso('Ups!! error de datos', 'h2');
-        }).catch(err => {
-            //console.error("ERROR: ", err.message);
-            new cartelAviso('Ups!! error de conexion', 'h2');
-        });*/
 
     }
 }

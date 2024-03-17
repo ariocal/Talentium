@@ -52,7 +52,7 @@ export class Util {
         return Util.recuperarSesionStorage('Authorization', padre);
     }
 
-    static guardarCliente(dato, padre) {
+    static guardarLogin(dato, padre) {
         try {
             sessionStorage.setItem('cliente', dato);
         } catch (error) {
@@ -61,7 +61,7 @@ export class Util {
         }
     }
 
-    static reuperarCliente(padre) {
+    static reuperarLogin(padre) {
         return Util.recuperarSesionStorage('cliente', padre);
     }
 
