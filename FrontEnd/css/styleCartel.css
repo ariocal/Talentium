@@ -3,7 +3,7 @@
 
 #cartel {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--azul_principal);
+    background-color: var(--azul_claro);
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
     min-width: 300px;
