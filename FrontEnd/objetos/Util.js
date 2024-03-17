@@ -40,7 +40,7 @@ export class Util {
 
     static guardarAuthorization(dato, padre) {
         try {
-            sessionStorage.setItem('Authorization', dato);
+            if(dato != null) sessionStorage.setItem('Authorization', dato);
         } catch (error) {
             new cartelAviso('error al guardar el usuario', padre);
 
