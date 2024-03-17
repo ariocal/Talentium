@@ -41,57 +41,57 @@
             </form>
         </div>
         <div class="recuadro">
-            <div class="volver">
+            <div class="volver" onclick="volverUltimaPagina()">
                 <img src="img/flecha_izq.png" alt="">
-                <p><a href="index.html">Volver</a></p>
+                <span>Volver</span>
             </div>
             <div class="contenidoRecuadro">
-                <h2>Completa tu perfil</h2>
+                <h2>Actualiza tu perfil</h2>
                 <form class="perfil_form">
                     <div class="perfil_columna_izq">
-                        <div class="form-item">
+                        <div class="form-item nombre">
                             <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" class="readonly" readonly>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item apellido">
                             <label for="apellido">Apellido</label>
                             <input type="text" id="apellido" class="readonly" readonly>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item cuit">
                             <label for="cuit-cuil">CUIT / CUIL</label>
                             <input type="number" id="cuit-cuil" placeholder="Ingrese su CUIT / CUIL" required>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item celular">
                             <label for="celular">Celular</label>
                             <input type="number" id="celular" placeholder="Ingrese su celular" required>
                         </div>
                     </div>
 
                     <div class="perfil_columna_centro">
-                        <div class="form-item">
+                        <div class="form-item calle">
                             <label for="calle">Calle</label>
                             <input type="text" id="calle" placeholder="Ingrese la calle" required>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item numero">
                             <label for="numero">Número</label>
                             <input type="number" id="numero" placeholder="Ingrese el número" required>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item provincia">
                             <label for="provincia">Provincia</label>
                             <input type="text" id="provincia" placeholder="Ingrese la provincia" required>
                         </div>
-                        <div class="form-item">
+                        <div class="form-item localidad">
                             <label for="localidad">Localidad</label>
                             <input type="text" id="localidad" placeholder="Ingrese la localidad" required>
                         </div>
                     </div>
 
                     <div class="perfil_columna_der">
-                        <div class="form-item">
+                        <div class="form-item cbu">
                             <label for="cbu">CBU</label>
                             <input type="number" id="cbu" placeholder="Ingrese su CBU">
                         </div>
-                        <div class="form-item">
+                        <div class="form-item especialidad">
                             <label for="especialidad">Especialidad</label>
                             <select id="especialidad" name="Ingrese su especialidad">
                                 <option value="" disabled selected>Selecciona una especialidad</option>
@@ -115,6 +115,9 @@
             </div>
         </div>
     </section>
+
+    <script src="volver.js"></script>
+
 </body>
 
 </html>

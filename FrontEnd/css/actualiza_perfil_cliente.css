@@ -2,93 +2,58 @@
 @import url("aside.css");
 @import url("header_y_container.css");
 
-
-body {
-    color: var(--blanco_tenue);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    max-height: 100vh;
-    height: 100vh;
-    background-color: var(--azul_claro);
-    display: flex;
-}
-
 section.header_y_container {
-    .recuadro {
+    form.perfil_form {
         display: grid;
-        grid-template-rows: auto 1fr;
-        background-color: var(--azul_masClaro);
-        min-width: 100%;
-        height: 90%;
-        border: 1px outset var(--blanco_tenue);
-        border-radius: 5px;
-        margin: 0 15px;
+        grid-template-columns: repeat(2, 50%);
+        gap: 20px;
+        justify-content: center;
+        width: 50%;
 
-        div.contenidoRecuadro {
-            color: black;
-            text-align: center;
-            display: grid;
-            justify-items: center;
-            padding: 20px 0 30px 0;
+        .perfil_columna_izq,
+        .perfil_columna_der {
+            width: 100%;
+        }
+        .form-item {
+            margin-bottom: 18px;
+            text-align: left;
+            font-weight: bolder;
+            font-size: 0.95em;
 
-            h2 {
-                margin-bottom: 20px;
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border: none;
+                border-radius: 8px;
+                font-size: 0.95em;
             }
+            .readonly {
+                background-color: var(--azul_masClaro);
+                border: 1px solid white;
+            }
+        }
+        .boton_centrado {
+            width: 208%;
+            background-color: var(--azul_principal);
+            color: var(--blanco_tenue);
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            border: 4px outset var(--azul_claro);
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bolder;
 
-            form.perfil_form {
-                display: grid;
-                grid-template-columns: repeat(2, 50%);
-                gap: 20px;
-                justify-content: center;
-                width: 50%;
-
-                .perfil_columna_izq,
-                .perfil_columna_der {
-                    width: 100%;
-                }
-
-                .form-item {
-                    margin-bottom: 18px;
-                    text-align: left;
-                    font-weight: bolder;
-                    font-size: 0.95em;
-
-                    input {
-                        width: 100%;
-                        padding: 8px;
-                        margin-top: 5px;
-                        border: none;
-                        border-radius: 8px;
-                        font-size: 0.95em;
-                    }
-                    .readonly{
-                        background-color: var(--azul_masClaro);
-                        border: 1px solid white;
-                    }
-                }
-
-                .boton_centrado {
-                    width: 208%;
-                    background-color: var(--azul_principal);
-                    color: var(--blanco_tenue);
-                    padding: 10px;
-                    border: none;
-                    border-radius: 10px;
-                    border: 4px outset var(--azul_claro);
-                    cursor: pointer;
-                    font-size: 1em;
-                    font-weight: bolder;
-
-                    a {
-                        display: block;
-                        color: var(--blanco);
-                    }
-                    &:hover {
-                        background-color: var(--azul_oscuro);
-                    }
-                    &:active {
-                        transform: scale(95%);
-                    }
-                }
+            a {
+                display: block;
+                color: var(--blanco);
+            }
+            &:hover {
+                background-color: var(--azul_oscuro);
+            }
+            &:active {
+                transform: scale(95%);
             }
         }
     }

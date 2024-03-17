@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/../../Talentium" vcs="Git" />
+=======
+>>>>>>> 260e723044cb7923f771c281a524425592ab87eb
   </component>
 </project>

@@ -1,4 +1,4 @@
-export class Cartel {
+export class cartelAceptarCancelar {
 
     constructor(mensaje, divPadre) {
         this.mensaje = mensaje ?? '¿Estás seguro?';

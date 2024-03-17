@@ -41,9 +41,9 @@
             </form>
         </div>
         <div class="recuadro">
-            <div class="volver">
+            <div class="volver" onclick="volverUltimaPagina()">
                 <img src="img/flecha_izq.png" alt="">
-                <p><a href="index.html">Volver</a></p>
+                <span>Volver</span>
             </div>
             <div class="contenidoRecuadro">
                 <h2>Completa tu perfil</h2>
@@ -66,7 +66,7 @@
                             <input type="number" id="celular" placeholder="Ingrese su celular" required>
                         </div>
                     </div>
-                    
+
                     <div class="perfil_columna_der">
                         <div class="form-item">
                             <label for="calle">Calle</label>
@@ -86,12 +86,15 @@
                         </div>
                     </div>
                     <div class="boton_centrado">
-                        <a href="sitio_del_cliente.html">Crear perfil</a>
+                         <a id="crearPerfil"  >Crear perfil</a> <!--href="sitio_del_cliente.html"--> 
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    <script type="module" src="objetos/comp_perfil_cliente.js" defer></script>
+    <script src="objetos/volver.js"></script>
+
 </body>
 
 </html>
