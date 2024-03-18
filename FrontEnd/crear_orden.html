@@ -36,6 +36,9 @@
     </aside>
 
     <section class="header_y_container">
+        <div class="contenedor">
+            <div class="loader"></div>
+        </div>
         <div class="hola_buscador">
             <h4>Hola <span>Usuario</span></h4>
             <form id="buscador" action="/tu-pagina-de-busqueda" method="get">
@@ -45,18 +48,21 @@
             </form>
         </div>
         <div class="recuadro">
-            <div class="volver" onclick="volverUltimaPagina()">
-                <img src="img/flecha_izq.png" alt="">
-                <span>Volver</span>
-            </div>
-            <div class="contenidoRecuadro">
-                <h2>Crear orden:</h2>
-                <p>En construcción...</p>
+            <div id="registro_opciones">
+                <div class="volver" onclick="volverUltimaPagina()">
+                    <img src="img/flecha_izq.png" alt="">
+                    <span>Volver</span>
+                </div>
+                <div class="contenidoRecuadro">
+                    <h2>Crear orden:</h2>
+                    <div></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="objetos/volver.js"></script>
+    <script type="module" src="objetos/volver.js"></script>
+    <script type="module" src="objetos/loader/loader.js"></script>
 
 </body>
 

@@ -1,5 +1,6 @@
 @import url("style.css");
 @import url("styleCartel.css");
+@import url("loader.css");
 
 body {
     height: 100vh;
