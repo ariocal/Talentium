@@ -13,19 +13,21 @@ body {
   display: grid;
   place-content: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: rgba(30, 43, 132, 0.605);
+  /* background: rgba(30, 43, 132, 0.605); */
 }
-.container {
+.containerRating {
   display: grid;
   place-content: center;
   padding: 2rem;
   text-align: center;
-  min-height: 200px;
+  height: 200px;
+  width: 300px;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  color: white;
 }
-.container::after {
+.containerRating::after {
   z-index: -1;
   content: "";
   position: absolute;

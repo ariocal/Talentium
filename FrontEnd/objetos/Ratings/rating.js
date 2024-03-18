@@ -61,3 +61,4 @@ stars.forEach((star) => {
 document.addEventListener("DOMContentLoaded", function () {
   setRating(defaultRatingIndex);
 });
+
