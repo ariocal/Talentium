@@ -9,7 +9,7 @@ export class User {
         this.avatar = avata ?? '';
 
     }
-    async conexionApi() {
+     conexionApi() {
 
 
         const url = 'http://localhost:8080/usuarios';
@@ -21,7 +21,7 @@ export class User {
 
 
 
-        const response = await fetch(url, {
+          fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export class User {
         }).then(response => response.text())
             .then(data => {
                 Util.guardarLogin(data);
-          
+     
                 Util.guardarAuthorization(data.password);
        
                 if (data.name === null) Util.cambiarDePagina('sitio_del_cliente.html');

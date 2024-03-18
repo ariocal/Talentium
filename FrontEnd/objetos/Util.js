@@ -130,8 +130,9 @@ export class Util {
         window.location.href = pageUrl;
     }
 
-   static existUser(){
-   if( Util.reuperarUsuario() == null) Util.cambiarDePagina('index.html');
+   static existLogin(){
+  
+   if( Util.reuperarLogin() === null) Util.cambiarDePagina('index.html');
    }
 }
 

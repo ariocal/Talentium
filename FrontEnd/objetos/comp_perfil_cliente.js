@@ -3,7 +3,7 @@ import { Client } from './conexiones/Client.js';
 import {Util} from './Util.js'
 
 try {
-    Util.existUser();
+    Util.existLogin();
     
     const inputs = document.querySelectorAll('input');
     const crearPerfil = document.querySelector('#crearPerfil');
