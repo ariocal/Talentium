@@ -9,7 +9,7 @@ section.header_y_container {
         grid-template-columns: repeat(2, 50%);
         gap: 20px;
         justify-content: center;
-        width: 50%;
+        width: min(80%, 600px);
 
         .perfil_columna_izq,
         .perfil_columna_der {
@@ -31,6 +31,7 @@ section.header_y_container {
             }
         }
         .boton_centrado {
+            height: 50px;
             width: 208%;
             background-color: var(--azul_principal);
             color: var(--blanco_tenue);
