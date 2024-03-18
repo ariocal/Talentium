@@ -21,7 +21,7 @@ export class Client {
 
      conexionApi() {
 
-      
+      alert('cliente: '+Util.reuperarAuthorization())
 
         const url = 'http://localhost:8080/api/client';
         const userData = {

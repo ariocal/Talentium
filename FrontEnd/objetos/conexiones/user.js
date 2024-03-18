@@ -27,7 +27,7 @@ export class User {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(userData)
-        }).then(response => response.text())
+        }).then(response => response.json())
             .then(data => {
                 Util.guardarLogin(data);
                 Util.guardarAuthorization(data.password);
