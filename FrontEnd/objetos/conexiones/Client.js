@@ -21,15 +21,13 @@ export class Client {
 
      conexionApi() {
 
-      alert('cliente: '+Util.reuperarAuthorization())
-
         const url = 'http://localhost:8080/api/client';
         const userData = {
             name: this.name,
             lastname: this.lastname,
             dni: this.dni,
             phone: this.phone,
-            user: this.user,
+            user: this.user.id,
             direction: this.direction
         };
 
@@ -37,7 +35,7 @@ export class Client {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${Util.reuperarAuthorization()}`
+                'Authorization': `Bearer${Util.reuperarAuthorization()}`
             },
             body: JSON.stringify(userData)
         }).then(response => response.json())

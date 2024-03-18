@@ -55,7 +55,7 @@ export class Util {
 
     static guardarLogin(dato, padre) {
         try {
-            sessionStorage.setItem('cliente', dato);
+            sessionStorage.setItem('cliente',JSON.stringify(dato));
         } catch (error) {
             new cartelAviso('error al guardar el usuario', padre);
 
@@ -63,7 +63,7 @@ export class Util {
     }
 
     static reuperarLogin(padre) {
-        return Util.recuperarSesionStorage('cliente', padre);
+        return JSON.parse( Util.recuperarSesionStorage('cliente', padre) );
     }
 
     static cliente() {
