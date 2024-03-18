@@ -132,9 +132,15 @@ export class Util {
     }
 
    static existLogin(){
-  
    if( Util.reuperarLogin() === null) Util.cambiarDePagina('index.html');
    }
+
+   static existLoginClient(){
+    Util.existLogin();
+     const clientDb = Util.reuperarLogin();
+     console.log(clientDb)
+     if(clientDb.lastname !== null) Util.cambiarDePagina('sitio_del_cliente.html');      
+    }
 }
 
 
