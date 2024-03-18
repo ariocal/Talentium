@@ -38,9 +38,10 @@ export class Util {
         return Util.recuperarSesionStorage('usuario', padre);
     }
 
-    static guardarAuthorization(dato, padre) {
+    static guardarAuthorization(dato , padre) {
         try {
-            if(dato != null) sessionStorage.setItem('Authorization', dato);
+            let dat = dato ?? null;
+            if(dat !== null ) sessionStorage.setItem('Authorization', dato);
         } catch (error) {
             new cartelAviso('error al guardar el usuario', padre);
 
