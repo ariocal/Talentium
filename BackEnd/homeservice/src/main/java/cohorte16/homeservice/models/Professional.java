@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
+@Builder
 @Entity
 @Table(name="Profesionales")
 @Getter

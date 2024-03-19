@@ -1,5 +1,6 @@
 package cohorte16.homeservice.models;
 
+import cohorte16.homeservice.dtos.ProductCreatedDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
@@ -7,12 +8,13 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
-@Entity
+@Builder
 @Table(name = "productos")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @ToString
 public class Product {
 
@@ -39,9 +41,17 @@ public class Product {
     private byte[] photo;
 
     @ManyToOne
-    @JoinColumn(name = "profesional_id", referencedColumnName = "id")
+    @JoinColumn(name = "profesionales_id", referencedColumnName = "id")
     private Professional professional;
 
     @Column(name = "activo")
     private boolean active = Boolean.TRUE;
+
+    public Product(ProductCreatedDTO createdProductDTO){
+        this.professional.setId(createdProductDTO.profesionalId());
+        this.name = createdProductDTO.name();
+        this.price = createdProductDTO.price();
+        this.quantity = createdProductDTO.quantity();
+        this.photo = createdProductDTO.photo();
+    }
 }
