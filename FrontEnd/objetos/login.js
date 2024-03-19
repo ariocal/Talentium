@@ -15,19 +15,18 @@ registrarse.addEventListener('click', async () => {
 
     const userCreado = new User(inputs[0].value, inputs[1].value);
 
-
-
-
-    let respuesta = await userCreado.login();
+    await userCreado.login();
     
-    if(await respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
+
+    if(respuesta == null) new cartelAviso('Lo siento, algo salió mal, vuelve más tarde a intentarlo');
 
 
-    if (await respuesta != null) Util.guardarUsuario(respuesta);
+    if (respuesta != null) Util.guardarUsuario(respuesta);
     
-    if (await respuesta != null) a.href = "invitaAregistrar.html";
+    if (respuesta != null) a.href = "invitaAregistrar.html";
     
     //alert(Util.reuperarUsuario());
+
 
   } else {
     new cartelAviso('Los campos usuario y contraseña no deben estar vacíos')

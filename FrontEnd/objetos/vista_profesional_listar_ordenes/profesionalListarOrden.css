@@ -1,18 +1,6 @@
 
 
 #front {
-  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background: inherit;
-  backdrop-filter: blur(10px);
-  width: min(100%,50em);
-  border: 1px dotted gainsboro;
-  margin: 1em;
-  overflow: scroll;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 auto; */
-
   max-width: 1000px;
   width: min(100%,50em);
   height: 80vh;
@@ -66,10 +54,7 @@
 
     div {
       display: block;
-      /* width: inherit; */
-
-
-
+    
     }
   }
 

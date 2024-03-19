@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <aside>
+    <input type="checkbox" id="check" class="btnMenu">
+    <label for="check" class="checkbtn">
+        <i class="menu"><img src="img/icono-menu.png" alt="menu" width="40px" height="40px" z-index="3"></i>
+    </label>
+    <aside class="aside">
         <img class="logo" src="img/Logo1.png" alt="logo">
         <div class="avatarCliente">
             <img class="img_Cliente" src="img/NoAvatar.png" alt="avatar">
@@ -32,68 +36,75 @@
     </aside>
 
     <section class="header_y_container">
+        <div class="contenedor">
+            <div class="loader"></div>
+        </div>
         <div class="hola_buscador">
             <h4>Hola <span>Usuario</span></h4>
-            <form action="/tu-pagina-de-busqueda" method="get">
+            <form id="buscador" action="/tu-pagina-de-busqueda" method="get">
                 <label for="search"><img src="img/lupa.png" alt="lupa"></label>
                 <input class="buscador" type="text" id="search" name="q" placeholder="Escribe tu búsqueda">
                 <!-- <input type="submit" value="Buscar"> -->
             </form>
         </div>
         <div class="recuadro">
-            <div class="volver" onclick="volverUltimaPagina()">
-                <img src="img/flecha_izq.png" alt="">
-                <span>Volver</span>
-            </div>
-            <div class="contenidoRecuadro">
-                <h2>Completa tu perfil</h2>
-                <form class="perfil_form">
-                    <div class="perfil_columna_izq">
-                        <div class="form-item">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
-                        </div>
-                        <div class="form-item">
-                            <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
-                        </div>
-                        <div class="form-item">
-                            <label for="dni">DNI</label>
-                            <input type="number" id="dni" placeholder="Ingrese su DNI" required>
-                        </div>
-                        <div class="form-item">
-                            <label for="celular">Celular</label>
-                            <input type="number" id="celular" placeholder="Ingrese su celular" required>
-                        </div>
-                    </div>
+            <div id="registro_opciones">
 
-                    <div class="perfil_columna_der">
-                        <div class="form-item">
-                            <label for="calle">Calle</label>
-                            <input type="text" id="calle" placeholder="Ingrese la calle" required>
+                <div class="volver" onclick="volverUltimaPagina()">
+                    <img src="img/flecha_izq.png" alt="">
+                    <span>Volver</span>
+                </div>
+                <div class="contenidoRecuadro">
+                    <h2>Completa tu perfil</h2>
+                    <form class="perfil_form">
+                        <div class="perfil_columna_izq">
+                            <div class="form-item">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="dni">DNI</label>
+                                <input type="number" id="dni" placeholder="Ingrese su DNI" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="celular">Celular</label>
+                                <input type="number" id="celular" placeholder="Ingrese su celular" required>
+                            </div>
                         </div>
-                        <div class="form-item">
-                            <label for="numero">Número</label>
-                            <input type="number" id="numero" placeholder="Ingrese el número" required>
+
+                        <div class="perfil_columna_der">
+                            <div class="form-item">
+                                <label for="calle">Calle</label>
+                                <input type="text" id="calle" placeholder="Ingrese la calle" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="numero">Número</label>
+                                <input type="number" id="numero" placeholder="Ingrese el número" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="provincia">Provincia</label>
+                                <input type="text" id="provincia" placeholder="Ingrese la provincia" required>
+                            </div>
+                            <div class="form-item">
+                                <label for="localidad">Localidad</label>
+                                <input type="text" id="localidad" placeholder="Ingrese la localidad" required>
+                            </div>
                         </div>
-                        <div class="form-item">
-                            <label for="provincia">Provincia</label>
-                            <input type="text" id="provincia" placeholder="Ingrese la provincia" required>
+                        <div class="boton_centrado">
+                            <a id="crearPerfil">Crear perfil</a> <!--href="sitio_del_cliente.html"-->
                         </div>
-                        <div class="form-item">
-                            <label for="localidad">Localidad</label>
-                            <input type="text" id="localidad" placeholder="Ingrese la localidad" required>
-                        </div>
-                    </div>
-                    <div class="boton_centrado">
-                         <a id="crearPerfil"  >Crear perfil</a> <!--href="sitio_del_cliente.html"--> 
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
     <script type="module" src="objetos/comp_perfil_cliente.js" defer></script>
-    <script src="objetos/volver.js"></script>
+    <script type="module" src="objetos/volver.js"></script>
+    <script type="module" src="objetos/loader/loader.js"></script>
 
 </body>
 

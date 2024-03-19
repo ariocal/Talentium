@@ -1,32 +1,10 @@
 @import url("style.css");
 @import url("aside.css");
 @import url("header_y_container.css");
-
-body {
-    
-
-    aside {
-        nav {
-            @media (max-width: 1100px) {
-                height: 62%;
-            }
-
-            @media(max-width: 900px) {
-                height: 140%;
-            }
-        }
-    }
-}
+@import url("loader.css");
 
 section.header_y_container {
-    .contenidoRecuadro {
-        @media(max-width: 900px) {
-            height: auto;
-            width: 100%;
-            padding: 0;
-        }
-
-        form.perfil_form {
+    form.perfil_form {
             display: grid;
             grid-template-columns: repeat(3, 50%);
             gap: 20px;
